@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Chipunga Farm</title>
+    <title>Chipunga Farm - About Us</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -29,6 +29,69 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .team-item {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .team-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .team-img {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .team-item:hover .team-img img {
+            transform: scale(1.1);
+        }
+        .team-social {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(139, 107, 77, 0.9), transparent);
+            padding: 20px;
+            transition: bottom 0.3s;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .team-item:hover .team-social {
+            bottom: 0;
+        }
+        .team-social a {
+            width: 35px;
+            height: 35px;
+            background: white;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .team-social a:hover {
+            background: var(--primary);
+            color: white;
+            transform: rotate(360deg);
+        }
+        :root {
+            --primary: #8B6B4D;
+            --secondary: #6B4E3B;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,64 +101,64 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
-    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
-            <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt me-2"></i>PO Box 611
-Mzuzu / Malawi</small>
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>chipunga@farm.mw</small>
+<div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
+        <div class="col-lg-6 px-5 text-start">
+            <small><i class="fa fa-map-marker-alt me-2"></i>PO Box 611, Mzuzu, Malawi</small>
+            <small class="ms-4"><i class="fa fa-envelope me-2"></i>chipunga@farm.mw</small>
+        </div>
+        <div class="col-lg-6 px-5 text-end">
+            <small>Follow us:</small>
+            <a class="text-body ms-3" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="text-body ms-3" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="text-body ms-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a class="text-body ms-3" href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <div class="d-flex align-items-center">
+                <img src="img/logo.png" alt="Chipunga Farm Logo" class="me-2" style="height: 150px; max-width: 200px;">
             </div>
-            <div class="col-lg-6 px-5 text-end">
-                <small>Follow us:</small>
-                <a class="text-body ms-3" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="text-body ms-3" href=""><i class="fab fa-twitter"></i></a>
-                <a class="text-body ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="text-body ms-3" href=""><i class="fab fa-instagram"></i></a>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link active">About Us</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
+                        <a href="gallery.html" class="dropdown-item">Gallery</a>
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="feature.html" class="dropdown-item">Our Features</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </div>
+            <div class="d-none d-lg-flex ms-2">
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                    <small class="fa fa-search text-body"></small>
+                </a>
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                    <small class="fa fa-user text-body"></small>
+                </a>
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                    <small class="fa fa-shopping-bag text-body"></small>
+                </a>
             </div>
         </div>
-
-        <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                    <h1 class="fw-bold text-primary mb-4">CHIPUNGA<span class="text-secondary">FARM</span>LTD</h1>
-
-            </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link active">About Us</a>
-                    <a href="product.html" class="nav-item nav-link">Products</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="feature.html" class="dropdown-item">Our Features</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-                </div>
-                <div class="d-none d-lg-flex ms-2">
-                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                        <small class="fa fa-search text-body"></small>
-                    </a>
-                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                        <small class="fa fa-user text-body"></small>
-                    </a>
-                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                        <small class="fa fa-shopping-bag text-body"></small>
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
-
+    </nav>
+</div>
+<!-- Navbar End -->
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -103,7 +166,7 @@ Mzuzu / Malawi</small>
             <h1 class="display-3 mb-3 animated slideInDown">About Us</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a class="text-body" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-body" href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-body" href="#">Pages</a></li>
                     <li class="breadcrumb-item text-dark active" aria-current="page">About Us</li>
                 </ol>
@@ -112,84 +175,195 @@ Mzuzu / Malawi</small>
     </div>
     <!-- Page Header End -->
 
-
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="img/about.png">
+                        <img class="img-fluid w-100" src="img/about.png" alt="Chipunga Farm">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-5 mb-4">Best Organic Fruits And Vegetables</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Read More</a>
+                    <h1 class="display-5 mb-4">Premium Coffee, Macadamia & Honey from Malawi</h1>
+                    <p class="mb-4">Chipunga Farm is a premier agricultural enterprise based in Mzuzu, Malawi, specializing in high-quality coffee, macadamia nuts, and honey. With years of experience in sustainable farming, we pride ourselves on delivering the finest organic products to local and international markets.</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Sustainably grown coffee with rich, distinctive flavor</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Premium macadamia nuts from our orchards and outgrowers</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Pure, natural honey from our apiaries</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="product.html">View Our Products</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
 
+    <!-- Mission/Vision Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white p-5 text-center rounded shadow-sm h-100">
+                        <i class="fa fa-leaf fa-4x text-primary mb-4"></i>
+                        <h4 class="mb-3">Our Mission</h4>
+                        <p class="mb-0">To produce the highest quality organic products while empowering local farming communities through sustainable practices and fair partnerships.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white p-5 text-center rounded shadow-sm h-100">
+                        <i class="fa fa-eye fa-4x text-primary mb-4"></i>
+                        <h4 class="mb-3">Our Vision</h4>
+                        <p class="mb-0">To become Malawi's leading exporter of premium coffee, macadamia nuts, and honey, recognized globally for exceptional quality and sustainability.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-white p-5 text-center rounded shadow-sm h-100">
+                        <i class="fa fa-handshake fa-4x text-primary mb-4"></i>
+                        <h4 class="mb-3">Our Values</h4>
+                        <p class="mb-0">Integrity, sustainability, community empowerment, and excellence in everything we do.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mission/Vision End -->
+
+    <!-- Meet Our Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="display-5 mb-3">Meet Our Team</h1>
+                <p>The dedicated professionals behind Chipunga Farm's success</p>
+            </div>
+            <div class="row g-4">
+                <!-- Team Member 1 - Farm Manager -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="team-img">
+                            <img src="img/team/team-1.jpg" alt="John Banda" class="img-fluid">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-1">John Banda</h5>
+                            <span class="text-primary">Farm Manager</span>
+                            <p class="mt-3 mb-0 small">15+ years experience in coffee and macadamia cultivation</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 - Coffee Specialist -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light">
+                        <div class="team-img">
+                            <img src="img/team/team-2.jpg" alt="Grace Phiri" class="img-fluid">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-1">Grace Phiri</h5>
+                            <span class="text-primary">Coffee Production Specialist</span>
+                            <p class="mt-3 mb-0 small">Expert in sustainable coffee farming and processing</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 - Macadamia Expert -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="team-img">
+                            <img src="img/team/team-3.jpg" alt="David Mwale" class="img-fluid">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-1">David Mwale</h5>
+                            <span class="text-primary">Macadamia Specialist</span>
+                            <p class="mt-3 mb-0 small">Orchard management and nut quality control expert</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 4 - Beekeeping Expert -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="team-img">
+                            <img src="img/team/team-4.jpg" alt="Esther Chibwana" class="img-fluid">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-1">Esther Chibwana</h5>
+                            <span class="text-primary">Beekeeping Specialist</span>
+                            <p class="mt-3 mb-0 small">Expert in sustainable honey production and hive management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Meet Our Team End -->
+
+    <!-- Stats Section Start -->
+    <div class="container-fluid bg-primary bg-icon py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="text-white">
+                        <i class="fa fa-leaf fa-3x mb-3"></i>
+                        <h2 class="display-6 text-white">15+</h2>
+                        <p class="mb-0">Years of Experience</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="text-white">
+                        <i class="fa fa-users fa-3x mb-3"></i>
+                        <h2 class="display-6 text-white">50+</h2>
+                        <p class="mb-0">Outgrowers</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="text-white">
+                        <i class="fa fa-tractor fa-3x mb-3"></i>
+                        <h2 class="display-6 text-white">500+</h2>
+                        <p class="mb-0">Acres Under Cultivation</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="text-white">
+                        <i class="fa fa-globe fa-3x mb-3"></i>
+                        <h2 class="display-6 text-white">10+</h2>
+                        <p class="mb-0">Export Markets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Stats Section End -->
 
     <!-- Firm Visit Start -->
     <div class="container-fluid bg-primary bg-icon mt-5 py-6">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-md-7 wow fadeIn" data-wow-delay="0.1s">
-                    <h1 class="display-5 text-white mb-3">Visit Our Firm</h1>
-                    <p class="text-white mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
+                    <h1 class="display-5 text-white mb-3">Visit Our Farm</h1>
+                    <p class="text-white mb-0">Experience the beauty of Chipunga Farm firsthand. Tour our coffee plantations, macadamia orchards, and beekeeping operations. Meet our team and learn about our sustainable farming practices. Schedule your visit today!</p>
                 </div>
                 <div class="col-md-5 text-md-end wow fadeIn" data-wow-delay="0.5s">
-                    <a class="btn btn-lg btn-secondary rounded-pill py-3 px-5" href="">Visit Now</a>
+                    <a class="btn btn-lg btn-secondary rounded-pill py-3 px-5" href="contact.html">Schedule a Visit</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Firm Visit End -->
-
-
-    <!-- Feature Start -->
-    <div class="container-fluid bg-light bg-icon py-6">
-        <div class="container">
-            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-5 mb-3">Our Features</h1>
-                <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
-                        <h4 class="mb-3">Natural Process</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
-                        <h4 class="mb-3">Organic Products</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                        <h4 class="mb-3">Biologically Safe</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Feature End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -197,32 +371,32 @@ Mzuzu / Malawi</small>
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h1 class="fw-bold text-primary mb-4">CHIPUNGA<span class="text-secondary">FARM</span>LTD</h1>
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
+                    <p>Premium coffee, macadamia nuts, and honey from the fertile lands of Mzuzu, Malawi.</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>PO Box 611
-Mzuzu / Malawi</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>PO Box 611, Mzuzu, Malawi</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p><i class="fa fa-envelope me-3"></i>chipunga@farm.mw</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="product.html">Our Products</a>
+                    <a class="btn btn-link" href="outgrowers.html">Outgrowers Scheme</a>
+                    <a class="btn btn-link" href="gallery.html">Gallery</a>
+                    <a class="btn btn-link" href="blog.html">Blog</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <p>Subscribe to get updates about our harvest and products.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
@@ -234,10 +408,9 @@ Mzuzu / Malawi</p>
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a href="#">Chipunga Farm Ltd</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                     </div>
                 </div>
@@ -246,10 +419,8 @@ Mzuzu / Malawi</p>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
