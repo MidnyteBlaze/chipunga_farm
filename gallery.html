@@ -35,66 +35,359 @@
 
     <!-- Gallery Specific Styles -->
     <style>
-        .gallery-filter {
-            padding: 20px 0;
-            text-align: center;
-        }
-        .filter-btn {
-            background: none;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 10px 25px;
-            margin: 5px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: var(--primary);
-            color: #fff;
-        }
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 25px;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        .gallery-overlay {
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            background: rgba(var(--primary-rgb), 0.9);
-            color: white;
-            padding: 15px;
-            transition: bottom 0.3s;
-        }
-        .gallery-item:hover .gallery-overlay {
-            bottom: 0;
-        }
-        .gallery-overlay h5 {
-            margin: 0;
-            font-size: 18px;
-        }
-        .gallery-overlay p {
-            margin: 5px 0 0;
-            font-size: 14px;
-            opacity: 0.9;
-        }
         :root {
             --primary: #8B6B4D;
             --primary-rgb: 139, 107, 77;
+            --primary-light: rgba(139, 107, 77, 0.1);
+            --primary-dark: #6B4E3B;
+        }
+
+        /* Gallery Filter */
+        .gallery-filter-section {
+            padding: 40px 0 20px;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .filter-container {
+            background: white;
+            padding: 20px;
+            border-radius: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: inline-block;
+            margin: 0 auto;
+        }
+        
+        .filter-btn {
+            background: none;
+            border: none;
+            color: #6c757d;
+            padding: 12px 28px;
+            margin: 0 5px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .filter-btn:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: var(--primary-light);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+            z-index: 0;
+        }
+        
+        .filter-btn:hover:before {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            color: var(--primary);
+        }
+        
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 5px 15px rgba(139, 107, 77, 0.3);
+        }
+        
+        .filter-btn.active:before {
+            display: none;
+        }
+
+        /* Gallery Grid */
+        .gallery-section {
+            padding: 40px 0 80px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(139, 107, 77, 0.2);
+        }
+        
+        .gallery-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            text-decoration: none;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(139, 107, 77, 0.95), rgba(139, 107, 77, 0.7), transparent);
+            color: white;
+            padding: 30px 20px 20px;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-overlay h5 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease 0.1s;
+        }
+        
+        .gallery-overlay p {
+            margin: 8px 0 0;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease 0.2s;
+        }
+        
+        .gallery-item:hover .gallery-overlay h5,
+        .gallery-item:hover .gallery-overlay p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gallery-overlay .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            padding: 5px 12px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* Loading Animation */
+        .gallery-loading {
+            text-align: center;
+            padding: 50px 0;
+            display: none;
+        }
+        
+        .gallery-loading.active {
+            display: block;
+        }
+        
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 3px solid var(--primary-light);
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+        
+        .loader::after {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-bottom-color: var(--primary);
+        }
+        
+        @keyframes rotation {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Image Counter */
+        .image-counter {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #6c757d;
+        }
+        
+        .image-counter span {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            margin-top: 30px;
+            display: none;
+        }
+        
+        .no-results i {
+            font-size: 60px;
+            color: var(--primary);
+            opacity: 0.5;
+            margin-bottom: 20px;
+        }
+        
+        .no-results h4 {
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        
+        .no-results p {
+            color: #6c757d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .filter-container {
+                border-radius: 30px;
+                padding: 15px;
+            }
+            
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 14px;
+                margin: 3px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 15px;
+            }
+            
+            .gallery-overlay h5 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .filter-container {
+                border-radius: 20px;
+                padding: 10px;
+            }
+            
+            .filter-btn {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Stats Section */
+        .gallery-stats {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 40px 0;
+            margin-top: 40px;
+            color: white;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-item i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .stat-item h3 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .stat-item p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* Image Badge */
+        .image-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255,255,255,0.95);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 2;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Hover Effect Enhancement */
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .gallery-item:hover::before {
+            opacity: 1;
         }
     </style>
 </head>
@@ -107,68 +400,68 @@
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
-<div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-    <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
-        <div class="col-lg-6 px-5 text-start">
-            <small><i class="fa fa-map-marker-alt me-2"></i>PO Box 611, Mzuzu, Malawi</small>
-            <small class="ms-4"><i class="fa fa-envelope me-2"></i>chipunga@farm.mw</small>
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>PO Box 611, Mzuzu, Malawi</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>chipunga@farm.mw</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-body ms-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-body ms-3" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="text-body ms-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-body ms-3" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-        <div class="col-lg-6 px-5 text-end">
-            <small>Follow us:</small>
-            <a class="text-body ms-3" href="#"><i class="fab fa-facebook-f"></i></a>
-            <a class="text-body ms-3" href="#"><i class="fab fa-twitter"></i></a>
-            <a class="text-body ms-3" href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a class="text-body ms-3" href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <div class="d-flex align-items-center">
-                <img src="img/logo.png" alt="Chipunga Farm Logo" class="me-2" style="height: 150px; max-width: 200px;">
-            </div>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="product.html" class="nav-item nav-link">Products</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item active">Gallery</a>
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="feature.html" class="dropdown-item">Our Features</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
+        <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <div class="d-flex align-items-center">
+                    <img src="img/logo.png" alt="Chipunga Farm Logo" class="me-2" style="height: 150px; max-width: 200px;">
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="product.html" class="nav-item nav-link">Products</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
+                            <a href="gallery.html" class="dropdown-item active">Gallery</a>
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="feature.html" class="dropdown-item">Our Features</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                        <small class="fa fa-search text-body"></small>
+                    </a>
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                        <small class="fa fa-user text-body"></small>
+                    </a>
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                        <small class="fa fa-shopping-bag text-body"></small>
+                    </a>
+                </div>
             </div>
-            <div class="d-none d-lg-flex ms-2">
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
-                    <small class="fa fa-search text-body"></small>
-                </a>
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
-                    <small class="fa fa-user text-body"></small>
-                </a>
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
-                    <small class="fa fa-shopping-bag text-body"></small>
-                </a>
-            </div>
-        </div>
-    </nav>
-</div>
-<!-- Navbar End -->
+        </nav>
+    </div>
+    <!-- Navbar End -->
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
-            <h1 class="display-3 mb-3 animated slideInDown">Gallery</h1>
+            <h1 class="display-3 mb-3 animated slideInDown">Our Gallery</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a class="text-body" href="index.html">Home</a></li>
@@ -181,10 +474,10 @@
     <!-- Page Header End -->
 
     <!-- Gallery Filter Start -->
-    <div class="container-fluid gallery-filter wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="filter-controls">
-                <button class="filter-btn active" data-filter="all">All</button>
+    <div class="container-fluid gallery-filter-section wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
                 <button class="filter-btn" data-filter="coffee">Coffee</button>
                 <button class="filter-btn" data-filter="macadamia">Macadamia</button>
                 <button class="filter-btn" data-filter="honey">Honey</button>
@@ -196,97 +489,144 @@
     <!-- Gallery Filter End -->
 
     <!-- Gallery Grid Start -->
-    <div class="container-xxl py-6">
+    <div class="container-fluid gallery-section">
         <div class="container">
+            <!-- Image Counter -->
+            <div class="image-counter wow fadeInUp" data-wow-delay="0.2s">
+                Showing <span id="visible-count">25</span> of <span id="total-count">25</span> photos
+            </div>
+
+            <!-- Loading Animation -->
+            <div class="gallery-loading" id="gallery-loading">
+                <span class="loader"></span>
+                <p class="mt-3">Loading images...</p>
+            </div>
+
+            <!-- No Results -->
+            <div class="no-results" id="no-results">
+                <i class="fas fa-images"></i>
+                <h4>No Images Found</h4>
+                <p>There are no images in this category at the moment.</p>
+            </div>
+
+            <!-- Gallery Grid -->
             <div class="row g-4" id="gallery-grid">
                 <!-- Coffee Images -->
-                <div class="col-lg-4 col-md-6 gallery-item coffee">
-                    <a href="img/gallery/coffee-1.jpg" data-lightbox="gallery" data-title="Ripe coffee cherries ready for harvest">
-                        <img src="img/gallery/coffee-1.jpg" alt="Coffee Cherries" class="img-fluid">
+                <div class="col-lg-4 col-md-6 gallery-item coffee" data-category="coffee">
+                    <a href="img/gallery/coffee-1-large.jpg" data-lightbox="gallery" data-title="Ripe coffee cherries ready for harvest at Chipunga Farm">
+                        <img src="img/coffee-5.webp" alt="Ripe Coffee Cherries" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-tag me-1"></i>Premium Grade</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Coffee</span>
                             <h5>Coffee Cherries</h5>
-                            <p>Ready for harvest</p>
+                            <p>Ready for harvest • Peak season</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item coffee">
-                    <a href="img/gallery/coffee-2.jpg" data-lightbox="gallery" data-title="Coffee flowers in bloom">
-                        <img src="img/gallery/coffee-2.jpg" alt="Coffee Flowers" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item coffee" data-category="coffee">
+                    <a href="img/gallery/coffee-2-large.jpg" data-lightbox="gallery" data-title="Coffee flowers in bloom across our plantations">
+                        <img src="img/coffee-2.jpg" alt="Coffee Flowers in Bloom" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-calendar me-1"></i>Spring 2025</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Coffee</span>
                             <h5>Coffee Blossoms</h5>
                             <p>Sign of upcoming harvest</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item coffee">
-                    <a href="img/gallery/coffee-3.jpg" data-lightbox="gallery" data-title="Coffee processing at our wet mill">
-                        <img src="img/gallery/coffee-3.jpg" alt="Coffee Processing" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item coffee" data-category="coffee">
+                    <a href="img/gallery/coffee-3-large.jpg" data-lightbox="gallery" data-title="Coffee processing at our state-of-the-art wet mill">
+                        <img src="img/coffee-3.webp" alt="Coffee Processing" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-cog me-1"></i>Processing</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Coffee</span>
                             <h5>Coffee Processing</h5>
-                            <p>At our wet mill</p>
+                            <p>At our wet mill facility</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item coffee">
-                    <a href="img/gallery/coffee-4.jpg" data-lightbox="gallery" data-title="Sun-drying premium coffee beans">
-                        <img src="img/gallery/coffee-4.jpg" alt="Coffee Drying" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item coffee" data-category="coffee">
+                    <a href="img/gallery/coffee-4-large.jpg" data-lightbox="gallery" data-title="Sun-drying premium coffee beans on raised beds">
+                        <img src="img/coffee-4.jpg" alt="Coffee Beans Sun Drying" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-sun me-1"></i>Natural Process</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Coffee</span>
                             <h5>Sun Drying</h5>
                             <p>Premium coffee beans</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item coffee">
-                    <a href="img/gallery/coffee-5.jpg" data-lightbox="gallery" data-title="Coffee cupping session for quality testing">
-                        <img src="img/gallery/coffee-5.jpg" alt="Coffee Cupping" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item coffee" data-category="coffee">
+                    <a href="img/gallery/coffee-5-large.jpg" data-lightbox="gallery" data-title="Coffee cupping session for quality testing by our experts">
+                        <img src="img/coffee-1.jpg" alt="Coffee Cupping Session" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-star me-1"></i>Quality Control</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Coffee</span>
                             <h5>Coffee Cupping</h5>
-                            <p>Quality testing</p>
+                            <p>Quality testing in progress</p>
                         </div>
                     </a>
                 </div>
 
                 <!-- Macadamia Images -->
-                <div class="col-lg-4 col-md-6 gallery-item macadamia">
-                    <a href="img/gallery/macadamia-1.jpg" data-lightbox="gallery" data-title="Macadamia trees laden with nuts">
-                        <img src="img/gallery/macadamia-1.jpg" alt="Macadamia Trees" class="img-fluid">
+                <div class="col-lg-4 col-md-6 gallery-item macadamia" data-category="macadamia">
+                    <a href="img/gallery/macadamia-1-large.jpg" data-lightbox="gallery" data-title="Macadamia trees laden with nuts in our orchards">
+                        <img src="img/product-3.jpg" alt="Macadamia Orchard" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-tree me-1"></i>Orchard</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Macadamia</span>
                             <h5>Macadamia Orchard</h5>
-                            <p>Laden with nuts</p>
+                            <p>Laden with premium nuts</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item macadamia">
-                    <a href="img/gallery/macadamia-2.jpg" data-lightbox="gallery" data-title="Fresh macadamia nuts in their husks">
-                        <img src="img/gallery/macadamia-2.jpg" alt="Macadamia Nuts" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item macadamia" data-category="macadamia">
+                    <a href="img/gallery/macadamia-2-large.jpg" data-lightbox="gallery" data-title="Fresh macadamia nuts in their natural husks">
+                        <img src="img/product-4.jpg" alt="Fresh Macadamia Nuts" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-leaf me-1"></i>Fresh</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Macadamia</span>
                             <h5>Fresh Macadamia</h5>
-                            <p>In their husks</p>
+                            <p>In their natural husks</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item macadamia">
-                    <a href="img/gallery/macadamia-3.jpg" data-lightbox="gallery" data-title="Macadamia nuts cracking process">
-                        <img src="img/gallery/macadamia-3.jpg" alt="Macadamia Cracking" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item macadamia" data-category="macadamia">
+                    <a href="img/gallery/macadamia-3-large.jpg" data-lightbox="gallery" data-title="Macadamia nuts cracking process at our facility">
+                        <img src="img/product-5.jpg" alt="Macadamia Nut Cracking" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-industry me-1"></i>Processing</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Macadamia</span>
                             <h5>Nut Cracking</h5>
                             <p>Processing stage</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item macadamia">
-                    <a href="img/gallery/macadamia-4.jpg" data-lightbox="gallery" data-title="Dried and sorted macadamia kernels">
-                        <img src="img/gallery/macadamia-4.jpg" alt="Macadamia Kernels" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item macadamia" data-category="macadamia">
+                    <a href="img/gallery/macadamia-4-large.jpg" data-lightbox="gallery" data-title="Dried and sorted premium macadamia kernels">
+                        <img src="img/product-5.jpg" alt="Macadamia Kernels" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-check-circle me-1"></i>Premium Grade</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Macadamia</span>
                             <h5>Premium Kernels</h5>
                             <p>Dried and sorted</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item macadamia">
-                    <a href="img/gallery/macadamia-5.jpg" data-lightbox="gallery" data-title="Macadamia nut roasting">
-                        <img src="img/gallery/macadamia-5.jpg" alt="Macadamia Roasting" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item macadamia" data-category="macadamia">
+                    <a href="img/gallery/macadamia-5-large.jpg" data-lightbox="gallery" data-title="Macadamia nut roasting process">
+                        <img src="img/product-3.jpg" alt="Macadamia Roasting" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-fire me-1"></i>Roasting</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Macadamia</span>
                             <h5>Roasting</h5>
                             <p>Perfecting the flavor</p>
                         </div>
@@ -294,46 +634,60 @@
                 </div>
 
                 <!-- Honey Images -->
-                <div class="col-lg-4 col-md-6 gallery-item honey">
-                    <a href="img/gallery/honey-1.jpg" data-lightbox="gallery" data-title="Our beehives in an acacia forest">
-                        <img src="img/gallery/honey-1.jpg" alt="Beehives" class="img-fluid">
+                <div class="col-lg-4 col-md-6 gallery-item honey" data-category="honey">
+                    <a href="img/gallery/honey-1-large.jpg" data-lightbox="gallery" data-title="Our beehives in an acacia forest setting">
+                        <img src="img/gallery/honey-1.jpg" alt="Beehives in Forest" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-home me-1"></i>Apiary</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Honey</span>
                             <h5>Beehives</h5>
                             <p>In acacia forest</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item honey">
-                    <a href="img/gallery/honey-2.jpg" data-lightbox="gallery" data-title="Bees on honeycomb frame">
-                        <img src="img/gallery/honey-2.jpg" alt="Honeycomb" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item honey" data-category="honey">
+                    <a href="img/gallery/honey-2-large.jpg" data-lightbox="gallery" data-title="Bees working on honeycomb frame">
+                        <img src="img/gallery/honey-2.jpg" alt="Bees on Honeycomb" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-bug me-1"></i>Active</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Honey</span>
                             <h5>Busy Bees</h5>
                             <p>On honeycomb frame</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item honey">
-                    <a href="img/gallery/honey-3.jpg" data-lightbox="gallery" data-title="Fresh honey extraction">
-                        <img src="img/gallery/honey-3.jpg" alt="Honey Extraction" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item honey" data-category="honey">
+                    <a href="img/gallery/honey-3-large.jpg" data-lightbox="gallery" data-title="Fresh honey extraction process">
+                        <img src="img/gallery/honey-3.jpg" alt="Honey Extraction" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-tint me-1"></i>Fresh</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Honey</span>
                             <h5>Honey Extraction</h5>
                             <p>Fresh from the hive</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item honey">
-                    <a href="img/gallery/honey-4.jpg" data-lightbox="gallery" data-title="Pure, raw Chipunga honey">
-                        <img src="img/gallery/honey-4.jpg" alt="Raw Honey" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item honey" data-category="honey">
+                    <a href="img/gallery/honey-4-large.jpg" data-lightbox="gallery" data-title="Pure, raw Chipunga honey">
+                        <img src="img/gallery/honey-4.jpg" alt="Raw Honey" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-certificate me-1"></i>Pure</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Honey</span>
                             <h5>Raw Honey</h5>
                             <p>Unprocessed and pure</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item honey">
-                    <a href="img/gallery/honey-5.jpg" data-lightbox="gallery" data-title="Our honey packaging">
-                        <img src="img/gallery/honey-5.jpg" alt="Honey Packaging" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item honey" data-category="honey">
+                    <a href="img/gallery/honey-5-large.jpg" data-lightbox="gallery" data-title="Our honey packaging process">
+                        <img src="img/gallery/honey-5.jpg" alt="Honey Packaging" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-box me-1"></i>Packaged</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Honey</span>
                             <h5>Packaging</h5>
                             <p>Ready for market</p>
                         </div>
@@ -341,46 +695,60 @@
                 </div>
 
                 <!-- Farm Images -->
-                <div class="col-lg-4 col-md-6 gallery-item farm">
-                    <a href="img/gallery/farm-1.jpg" data-lightbox="gallery" data-title="Aerial view of Chipunga Farm">
-                        <img src="img/gallery/farm-1.jpg" alt="Farm Aerial View" class="img-fluid">
+                <div class="col-lg-4 col-md-6 gallery-item farm" data-category="farm">
+                    <a href="img/gallery/farm-1-large.jpg" data-lightbox="gallery" data-title="Aerial view of Chipunga Farm">
+                        <img src="img/gallery/farm-1.jpg" alt="Farm Aerial View" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-drone me-1"></i>Aerial</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">The Farm</span>
                             <h5>Chipunga Farm</h5>
-                            <p>Aerial view</p>
+                            <p>Aerial perspective</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item farm">
-                    <a href="img/gallery/farm-2.jpg" data-lightbox="gallery" data-title="Sunrise over the coffee fields">
-                        <img src="img/gallery/farm-2.jpg" alt="Farm Sunrise" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item farm" data-category="farm">
+                    <a href="img/gallery/farm-2-large.jpg" data-lightbox="gallery" data-title="Sunrise over the coffee fields">
+                        <img src="img/gallery/farm-2.jpg" alt="Sunrise at Farm" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-sun me-1"></i>Sunrise</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">The Farm</span>
                             <h5>Morning Glory</h5>
                             <p>Sunrise over coffee</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item farm">
-                    <a href="img/gallery/farm-3.jpg" data-lightbox="gallery" data-title="Our modern irrigation system">
-                        <img src="img/gallery/farm-3.jpg" alt="Irrigation" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item farm" data-category="farm">
+                    <a href="img/gallery/farm-3-large.jpg" data-lightbox="gallery" data-title="Our modern irrigation system">
+                        <img src="img/gallery/farm-3.jpg" alt="Irrigation System" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-water me-1"></i>Sustainable</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">The Farm</span>
                             <h5>Irrigation</h5>
                             <p>Sustainable water use</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item farm">
-                    <a href="img/gallery/farm-4.jpg" data-lightbox="gallery" data-title="Nursery with young coffee plants">
-                        <img src="img/gallery/farm-4.jpg" alt="Nursery" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item farm" data-category="farm">
+                    <a href="img/gallery/farm-4-large.jpg" data-lightbox="gallery" data-title="Nursery with young coffee plants">
+                        <img src="img/gallery/farm-4.jpg" alt="Plant Nursery" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-seedling me-1"></i>Nursery</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">The Farm</span>
                             <h5>Nursery</h5>
                             <p>Growing tomorrow's harvest</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item farm">
-                    <a href="img/gallery/farm-5.jpg" data-lightbox="gallery" data-title="Our processing facility">
-                        <img src="img/gallery/farm-5.jpg" alt="Processing Facility" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item farm" data-category="farm">
+                    <a href="img/gallery/farm-5-large.jpg" data-lightbox="gallery" data-title="Our processing facility">
+                        <img src="img/gallery/farm-5.jpg" alt="Processing Facility" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-industry me-1"></i>Facility</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">The Farm</span>
                             <h5>Processing Facility</h5>
                             <p>State-of-the-art equipment</p>
                         </div>
@@ -388,46 +756,60 @@
                 </div>
 
                 <!-- People Images -->
-                <div class="col-lg-4 col-md-6 gallery-item people">
-                    <a href="img/gallery/people-1.jpg" data-lightbox="gallery" data-title="Our skilled farm workers">
-                        <img src="img/gallery/people-1.jpg" alt="Farm Workers" class="img-fluid">
+                <div class="col-lg-4 col-md-6 gallery-item people" data-category="people">
+                    <a href="img/gallery/people-1-large.jpg" data-lightbox="gallery" data-title="Our skilled farm workers">
+                        <img src="img/gallery/people-1.jpg" alt="Farm Workers" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-users me-1"></i>Team</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Our People</span>
                             <h5>Our Team</h5>
                             <p>Skilled and dedicated</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item people">
-                    <a href="img/gallery/people-2.jpg" data-lightbox="gallery" data-title="Training session for outgrowers">
-                        <img src="img/gallery/people-2.jpg" alt="Training Session" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item people" data-category="people">
+                    <a href="img/gallery/people-2-large.jpg" data-lightbox="gallery" data-title="Training session for outgrowers">
+                        <img src="img/gallery/people-2.jpg" alt="Training Session" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-chalkboard-teacher me-1"></i>Training</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Our People</span>
                             <h5>Training</h5>
                             <p>Empowering farmers</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item people">
-                    <a href="img/gallery/people-3.jpg" data-lightbox="gallery" data-title="Harvest celebration with partner farmers">
-                        <img src="img/gallery/people-3.jpg" alt="Harvest Celebration" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item people" data-category="people">
+                    <a href="img/gallery/people-3-large.jpg" data-lightbox="gallery" data-title="Harvest celebration with partner farmers">
+                        <img src="img/gallery/people-3.jpg" alt="Harvest Celebration" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-glass-cheers me-1"></i>Celebration</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Our People</span>
                             <h5>Harvest Celebration</h5>
                             <p>With partner farmers</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item people">
-                    <a href="img/gallery/people-4.jpg" data-lightbox="gallery" data-title="Quality control team at work">
-                        <img src="img/gallery/people-4.jpg" alt="Quality Control" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item people" data-category="people">
+                    <a href="img/gallery/people-4-large.jpg" data-lightbox="gallery" data-title="Quality control team at work">
+                        <img src="img/gallery/people-4.jpg" alt="Quality Control" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-clipboard-check me-1"></i>Quality</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Our People</span>
                             <h5>Quality Control</h5>
                             <p>Ensuring excellence</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 gallery-item people">
-                    <a href="img/gallery/people-5.jpg" data-lightbox="gallery" data-title="Community outreach program">
-                        <img src="img/gallery/people-5.jpg" alt="Community" class="img-fluid">
+                
+                <div class="col-lg-4 col-md-6 gallery-item people" data-category="people">
+                    <a href="img/gallery/people-5-large.jpg" data-lightbox="gallery" data-title="Community outreach program">
+                        <img src="img/gallery/people-5.jpg" alt="Community Outreach" class="img-fluid" loading="lazy">
+                        <div class="image-badge"><i class="fas fa-heart me-1"></i>Community</div>
                         <div class="gallery-overlay">
+                            <span class="category-badge">Our People</span>
                             <h5>Community</h5>
                             <p>Giving back</p>
                         </div>
@@ -438,6 +820,35 @@
     </div>
     <!-- Gallery Grid End -->
 
+    <!-- Gallery Stats Start -->
+    <div class="container-fluid gallery-stats wow fadeInUp" data-wow-delay="0.3s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 stat-item mb-4 mb-md-0">
+                    <i class="fas fa-camera-retro"></i>
+                    <h3 class="counter" data-target="250">250+</h3>
+                    <p>Photos Taken</p>
+                </div>
+                <div class="col-md-3 col-6 stat-item mb-4 mb-md-0">
+                    <i class="fas fa-mug-hot"></i>
+                    <h3 class="counter" data-target="85">85+</h3>
+                    <p>Coffee Images</p>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <i class="fas fa-seedling"></i>
+                    <h3 class="counter" data-target="70">70+</h3>
+                    <p>Macadamia Photos</p>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <i class="fas fa-bug"></i>
+                    <h3 class="counter" data-target="45">45+</h3>
+                    <p>Honey Gallery</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Stats End -->
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -447,6 +858,8 @@
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="product.html">Products</a>
+                    <a class="btn btn-link" href="Out_Growers_Scheme.html">Outgrowers Scheme</a>
+                    <a class="btn btn-link" href="gallery.html">Gallery</a>
                     <a class="btn btn-link" href="blog.html">Blog</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -459,14 +872,15 @@
                     <h4 class="text-primary mb-4">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>PO Box 611, Mzuzu, Malawi</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>chipunga@farm.mw</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+265 123 456 789</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-primary mb-4">Follow Us</h4>
                     <div class="d-flex">
-                        <a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle me-2" href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -475,7 +889,10 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Chipunga Farm</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">Chipunga Farm Ltd</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                     </div>
                 </div>
             </div>
@@ -494,6 +911,8 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
@@ -501,31 +920,68 @@
     <!-- Gallery Filter Script -->
     <script>
         $(document).ready(function() {
+            // Initialize counter
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+
+            // Filter functionality
             $('.filter-btn').click(function() {
                 var filterValue = $(this).data('filter');
                 
-                // Update active button
+                // Update active button with animation
                 $('.filter-btn').removeClass('active');
                 $(this).addClass('active');
                 
-                // Filter items
-                if (filterValue === 'all') {
-                    $('.gallery-item').show();
-                } else {
-                    $('.gallery-item').hide();
-                    $('.gallery-item.' + filterValue).show();
-                }
+                // Show loading
+                $('#gallery-loading').addClass('active');
+                $('#gallery-grid').fadeOut(300);
+                
+                setTimeout(function() {
+                    // Filter items
+                    if (filterValue === 'all') {
+                        $('.gallery-item').fadeIn(400);
+                    } else {
+                        $('.gallery-item').hide();
+                        $('.gallery-item.' + filterValue).fadeIn(400);
+                    }
+                    
+                    // Update visible count
+                    var visibleCount = $('.gallery-item:visible').length;
+                    var totalCount = $('.gallery-item').length;
+                    $('#visible-count').text(visibleCount);
+                    
+                    // Hide loading
+                    $('#gallery-loading').removeClass('active');
+                    $('#gallery-grid').fadeIn(300);
+                    
+                    // Show/hide no results message
+                    if (visibleCount === 0) {
+                        $('#no-results').fadeIn();
+                    } else {
+                        $('#no-results').fadeOut();
+                    }
+                }, 500);
             });
 
             // Lightbox options
-             lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'albumLabel': 'Image %1 of %2',
-            'fadeDuration': 300,
-            'imageFadeDuration': 300
+            lightbox.option({
+                'resizeDuration': 300,
+                'wrapAround': true,
+                'albumLabel': 'Image %1 of %2',
+                'fadeDuration': 300,
+                'imageFadeDuration': 300,
+                'positionFromTop': 50,
+                'maxWidth': 1200,
+                'maxHeight': 800
+            });
+
+            // Initialize with total count
+            var totalCount = $('.gallery-item').length;
+            $('#total-count').text(totalCount);
+            $('#visible-count').text(totalCount);
         });
-    });
     </script>
 </body>
 
