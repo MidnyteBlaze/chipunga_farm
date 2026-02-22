@@ -39,7 +39,7 @@
         }
         .team-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(139, 107, 77, 0.15);
         }
         .team-img {
             position: relative;
@@ -86,6 +86,16 @@
             background: var(--primary);
             color: white;
             transform: rotate(360deg);
+        }
+        .team-position-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(139, 107, 77, 0.1);
+            color: var(--primary);
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
         :root {
             --primary: #8B6B4D;
@@ -231,79 +241,101 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="display-5 mb-3">Meet Our Team</h1>
+                <h1 class="display-5 mb-3">Meet Our Leadership Team</h1>
                 <p>The dedicated professionals behind Chipunga Farm's success</p>
             </div>
             <div class="row g-4">
-                <!-- Team Member 1 - Farm Manager -->
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- Team Member 1 - Joseph Mkinga, General Manager -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="team-img">
-                            <img src="img/team/team-1.jpg" alt="John Banda" class="img-fluid">
+                            <img src="img/team/joseph-mkinga.jpg" alt="Joseph Mkinga - General Manager" class="img-fluid">
                             <div class="team-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:joseph@chipungafarm.mw"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-1">John Banda</h5>
-                            <span class="text-primary">Farm Manager</span>
-                            <p class="mt-3 mb-0 small">15+ years experience in coffee and macadamia cultivation</p>
+                            <span class="team-position-badge">General Manager</span>
+                            <h5 class="mb-1">Joseph Mkinga</h5>
+                            <p class="mt-3 mb-0 small">Leading Chipunga Farm with over 20 years of experience in agricultural management and export operations.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Team Member 2 - Coffee Specialist -->
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                
+                <!-- Team Member 2 - Junior Mwiba, Agribusiness Accountant -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="team-item bg-light">
                         <div class="team-img">
-                            <img src="img/team/team-2.jpg" alt="Grace Phiri" class="img-fluid">
+                            <img src="img/team/junior-mwiba.jpg" alt="Junior Mwiba - Agribusiness Accountant" class="img-fluid">
                             <div class="team-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:junior@chipungafarm.mw"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-1">Grace Phiri</h5>
-                            <span class="text-primary">Coffee Production Specialist</span>
-                            <p class="mt-3 mb-0 small">Expert in sustainable coffee farming and processing</p>
+                            <span class="team-position-badge">Agribusiness Accountant</span>
+                            <h5 class="mb-1">Junior Mwiba</h5>
+                            <p class="mt-3 mb-0 small">Expert in agricultural finance, ensuring sustainable growth and financial integrity across all operations.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Team Member 3 - Macadamia Expert -->
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                
+                <!-- Team Member 3 - Adams Mhone, Farm Manager -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
                         <div class="team-img">
-                            <img src="img/team/team-3.jpg" alt="David Mwale" class="img-fluid">
+                            <img src="img/team/adams-mhone.jpg" alt="Adams Mhone - Farm Manager" class="img-fluid">
                             <div class="team-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:adams@chipungafarm.mw"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-1">David Mwale</h5>
-                            <span class="text-primary">Macadamia Specialist</span>
-                            <p class="mt-3 mb-0 small">Orchard management and nut quality control expert</p>
+                            <span class="team-position-badge">Farm Manager</span>
+                            <h5 class="mb-1">Adams Mhone</h5>
+                            <p class="mt-3 mb-0 small">Oversees all farming operations, specializing in coffee and macadamia cultivation with 15+ years experience.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Team Member 4 - Beekeeping Expert -->
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                
+                <!-- Team Member 4 - Grace Msiska, Quality Supervisor -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="team-item bg-light">
                         <div class="team-img">
-                            <img src="img/team/team-4.jpg" alt="Esther Chibwana" class="img-fluid">
+                            <img src="img/team/grace-msiska.jpg" alt="Grace Msiska - Quality Supervisor" class="img-fluid">
                             <div class="team-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:grace@chipungafarm.mw"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-1">Esther Chibwana</h5>
-                            <span class="text-primary">Beekeeping Specialist</span>
-                            <p class="mt-3 mb-0 small">Expert in sustainable honey production and hive management</p>
+                            <span class="team-position-badge">Quality Supervisor</span>
+                            <h5 class="mb-1">Grace Msiska</h5>
+                            <p class="mt-3 mb-0 small">Ensures all products meet international quality standards through rigorous testing and quality control.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 - Kelvin Chidzuwa, Outgrowers Coordinator -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="team-img">
+                            <img src="img/team/kelvin-chidzuwa.jpg" alt="Kelvin Chidzuwa - Outgrowers Coordinator" class="img-fluid">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:kelvin@chipungafarm.mw"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <span class="team-position-badge">Outgrowers Coordinator</span>
+                            <h5 class="mb-1">Kelvin Chidzuwa</h5>
+                            <p class="mt-3 mb-0 small">Manages relationships with over 50 outgrower farmers, providing training and support for quality production.</p>
                         </div>
                     </div>
                 </div>
@@ -382,15 +414,15 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
                     <p><i class="fa fa-map-marker-alt me-3"></i>PO Box 611, Mzuzu, Malawi</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>chipunga@farm.mw</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+265 888 123 456</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@chipungafarm.mw</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="product.html">Our Products</a>
-                    <a class="btn btn-link" href="outgrowers.html">Outgrowers Scheme</a>
+                    <a class="btn btn-link" href="Out_Growers_Scheme.html">Outgrowers Scheme</a>
                     <a class="btn btn-link" href="gallery.html">Gallery</a>
                     <a class="btn btn-link" href="blog.html">Blog</a>
                 </div>
@@ -411,7 +443,7 @@
                         &copy; <a href="#">Chipunga Farm Ltd</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        Designed By <a href="">Himawari Holdings</a>
+                        Designed By <a href="#">Himawari Holdings</a>
                     </div>
                 </div>
             </div>
