@@ -57,14 +57,15 @@ $navLinks = @{
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item">Gallery</a>
                         <a href="blog.html" class="dropdown-item">Blog Grid</a>
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -74,14 +75,15 @@ $navLinks = @{
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link active">About Us</a>
                 <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item">Gallery</a>
                         <a href="blog.html" class="dropdown-item">Blog Grid</a>
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -91,14 +93,15 @@ $navLinks = @{
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="product.html" class="nav-item nav-link active">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item">Gallery</a>
                         <a href="blog.html" class="dropdown-item">Blog Grid</a>
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -108,14 +111,15 @@ $navLinks = @{
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link active">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item active">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item">Gallery</a>
                         <a href="blog.html" class="dropdown-item">Blog Grid</a>
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -125,14 +129,15 @@ $navLinks = @{
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item active">Gallery</a>
                         <a href="blog.html" class="dropdown-item">Blog Grid</a>
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -142,14 +147,15 @@ $navLinks = @{
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item">Gallery</a>
                         <a href="blog.html" class="dropdown-item active">Blog Grid</a>
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -159,14 +165,15 @@ $navLinks = @{
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item">Gallery</a>
                         <a href="blog.html" class="dropdown-item">Blog Grid</a>
                         <a href="feature.html" class="dropdown-item active">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -176,14 +183,15 @@ $navLinks = @{
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item">Gallery</a>
                         <a href="blog.html" class="dropdown-item">Blog Grid</a>
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item active">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -193,14 +201,15 @@ $navLinks = @{
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item">Gallery</a>
                         <a href="blog.html" class="dropdown-item">Blog Grid</a>
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -210,15 +219,34 @@ $navLinks = @{
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu m-0">
-                        <a href="Out_Growers_Scheme.html" class="dropdown-item">Outgrowers Scheme</a>
-                        <a href="gallery.html" class="dropdown-item">Gallery</a>
                         <a href="blog.html" class="dropdown-item">Blog Grid</a>
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
                         <a href="404.html" class="dropdown-item active">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+'@
+    "policies.html" = @'
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="feature.html" class="dropdown-item">Our Features</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item active">Policies & Resources</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact Us</a>
