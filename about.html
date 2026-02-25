@@ -97,6 +97,92 @@
             font-weight: 600;
             margin-bottom: 10px;
         }
+        
+        /* New styles for the investment section */
+        .investment-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid rgba(139, 107, 77, 0.1);
+        }
+        
+        .investment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(139, 107, 77, 0.15);
+            border-color: var(--primary);
+        }
+        
+        .investment-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(139, 107, 77, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .investment-icon i {
+            font-size: 30px;
+            color: var(--primary);
+        }
+        
+        .fact-figure {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+        
+        .fact-label {
+            color: #6c757d;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .sustainability-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .impact-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            list-style: none;
+        }
+        
+        .impact-list li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .water-users-card {
+            background: var(--primary);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .water-users-card i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
         :root {
             --primary: #8B6B4D;
             --secondary: #6B4E3B;
@@ -186,60 +272,282 @@
     </div>
     <!-- Page Header End -->
 
-    <!-- About Start -->
+    <!-- Investing in Sustainable Agribusiness Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="img/about.png" alt="Chipunga Farm">
+                        <img class="img-fluid w-100" src="img/about.png" alt="Chipunga Farm Aerial View">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-5 mb-4">Premium Coffee, Macadamia & Honey from Malawi</h1>
-                    <p class="mb-4">Chipunga Farm is a premier agricultural enterprise based in Mzuzu, Malawi, specializing in high-quality coffee, macadamia nuts, and honey. With years of experience in sustainable farming, we pride ourselves on delivering the finest organic products to local and international markets.</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Sustainably grown coffee with rich, distinctive flavor</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Premium macadamia nuts from our orchards and outgrowers</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Pure, natural honey from our apiaries</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="product.html">View Our Products</a>
+                    <h1 class="display-5 mb-4">Investing in a Sustainable Agribusiness</h1>
+                    <p class="mb-4">Chipunga is a <strong>287 ha greenfield coffee and macadamia plantation</strong> located in Nkhatabay District in Northern Malawi. Chipunga Farm Ltd. – owner of the plantation – was acquired by the Diocese of Karonga with a loan from Missio USA and is managed and developed through trustful experts well known by the Diocese.</p>
+                    <p class="mb-4">The business strategy of Chipunga Farm Ltd. is the production of high quality Arabica coffee berries and macadamia nuts generating sustainable income for the Diocese. Of the 287 ha, <strong>150 ha will be planted with coffee</strong> and <strong>100 ha will be planted with macadamia</strong> while the remaining land will be used for horticulture, tree plantation and infrastructural development like roads and houses.</p>
+                    <div class="row g-4 mt-3">
+                        <div class="col-6">
+                            <div class="fact-figure">150 ha</div>
+                            <div class="fact-label">Coffee Plantation</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fact-figure">100 ha</div>
+                            <div class="fact-label">Macadamia Plantation</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Investing in Sustainable Agribusiness End -->
 
-    <!-- Mission/Vision Start -->
+    <!-- Processing & Timeline Start -->
     <div class="container-fluid bg-light py-5">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-white p-5 text-center rounded shadow-sm h-100">
-                        <i class="fa fa-leaf fa-4x text-primary mb-4"></i>
-                        <h4 class="mb-3">Our Mission</h4>
-                        <p class="mb-0">To produce the highest quality organic products while empowering local farming communities through sustainable practices and fair partnerships.</p>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="investment-card">
+                        <div class="investment-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h4 class="mb-3">Processing Strategy</h4>
+                        <p class="mb-4">The short term plan is to process the coffee berries into washed green beans at <strong>Mzuzu Coffee Authority factory</strong> 22km away in Mzuzu City while macadamia nuts will be processed by <strong>Tropha Farm</strong> just outside Mzuzu City.</p>
+                        <p class="mb-0">Once coffee production reaches its full capacity, the long-term plan is to have the coffee berries washed at the Farm itself.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="bg-white p-5 text-center rounded shadow-sm h-100">
-                        <i class="fa fa-eye fa-4x text-primary mb-4"></i>
-                        <h4 class="mb-3">Our Vision</h4>
-                        <p class="mb-0">To become Malawi's leading exporter of premium coffee, macadamia nuts, and honey, recognized globally for exceptional quality and sustainability.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white p-5 text-center rounded shadow-sm h-100">
-                        <i class="fa fa-handshake fa-4x text-primary mb-4"></i>
-                        <h4 class="mb-3">Our Values</h4>
-                        <p class="mb-0">Integrity, sustainability, community empowerment, and excellence in everything we do.</p>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="investment-card">
+                        <div class="investment-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="mb-3">Strategic Timeline</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>2023:</strong> First positive annual Cash Flow expected</li>
+                            <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>2024:</strong> Macadamia capacity will be reached</li>
+                            <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>2025:</strong> Coffee capacity will be reached & return anticipated on cumulative basis</li>
+                        </ul>
+                        <p class="mb-0 mt-3">Chipunga sees high demand for high quality Arabica coffee and macadamia. Therefore our vision is to be a coffee and macadamia plantation that meets world class standards and sustainable agricultural practices.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Mission/Vision End -->
+    <!-- Processing & Timeline End -->
+
+    <!-- Social Impact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="display-6 mb-4">Community & Social Impact</h2>
+                    <p class="mb-4">Through the acquisition of Chipunga Farm the Diocese intends to create sustainable income and provides permanent and temporary work for <strong>60 people and 100 people respectively</strong> working on the farm. In the future the faithful of the Diocese will benefit from the additional financial return.</p>
+                    <p class="mb-4">The laborers working on the farm will have more funds available to improve their quality of life, e.g. purchasing solar panels to have electricity and improve housing for the family.</p>
+                    <p class="mb-4">Besides this more than <strong>500 small scale farmers</strong> from surrounding villages will benefit from services such as agricultural advisory, processing and marketing services. We are very positive that the acquisition and the development of Chipunga Farm will meet the criteria of impact investment.</p>
+                    <div class="row g-4 mt-3">
+                        <div class="col-4 text-center">
+                            <div class="fact-figure">60</div>
+                            <div class="fact-label">Permanent Jobs</div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="fact-figure">100</div>
+                            <div class="fact-label">Temporary Jobs</div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="fact-figure">500+</div>
+                            <div class="fact-label">OGS Beneficiaries</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <img class="img-fluid rounded" src="img/community.jpg" alt="Community Impact">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Social Impact End -->
+
+    <!-- Sustainability From The Ground Up Start -->
+    <div class="container-fluid sustainability-section wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <h2 class="display-6 mb-4">Sustainability From The Ground Up</h2>
+                    <p class="mb-4">Developing a greenfield plantation like Chipunga requires deep understanding of the issues on the ground e.g. risks that may negatively affect the investment and active stakeholder engagement. As part of a risk management strategy especially drought, Chipunga is committed to implement an <strong>integrated water resources management (IWRM) plan</strong> for the project.</p>
+                    <p class="mb-4">Both the coffee and macadamia production, by means of drip irrigation, and the coffee washing station will require significant quantities of water which has to come from the <strong>Chipunga River</strong> which runs through the Farm. This calls for a thorough assessment of the water availability, quantities and quality and use with regards to, not only the project, but also the communities and ecosystem needs.</p>
+                    <p class="mb-4">As part of the IWRM plan, Chipunga intends to build a dam on Chipunga River in order to staunch the water flow during the rainy season for use during the dry season.</p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="water-users-card">
+                        <i class="fas fa-hand-holding-water"></i>
+                        <h4 class="text-white mb-3">Water Users Association</h4>
+                        <p class="text-white mb-4">Chipunga has facilitated the creation of a <strong>Water Users Association</strong> where it cooperates with local communities, other users and the government to ensure responsible water use and sustainable management of the catchment area for now and the future.</p>
+                        <p class="text-white mb-0">The knowledge and experience gained through this project will be transferred to <strong>Kajikhomele Farm</strong> in Chiwera, Rumphi District, where another independent and registered company of the Diocese intends to open a 100 ha farm for coffee, macadamia and beekeeping.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sustainability From The Ground Up End -->
+
+    <!-- Outgrower Scheme Programme Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <img class="img-fluid rounded" src="img/outgrowers.jpg" alt="Outgrower Scheme">
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h2 class="display-6 mb-4">Outgrower Scheme Programme</h2>
+                    <p class="mb-4">Chipunga has established an <strong>Out Grower Scheme (OGS) programme</strong> directly targeting <strong>500 small scale farmers</strong> around the Farm as part of its social responsibility. The Out Grower Scheme programme will train and support the small scale farmers to improve yields of their own coffee and macadamia.</p>
+                    <p class="mb-4">In addition to access to; extension services, improved and clean seedlings, small scale farmers targeted under the Out Grower Scheme will also benefit from processing and marketing activities undertaken by the Farm.</p>
+                    <a href="Out_Growers_Scheme.html" class="btn btn-primary rounded-pill py-3 px-5 mt-2">Learn More About OGS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Outgrower Scheme Programme End -->
+
+    <!-- Facts and Figures Start -->
+    <div class="container-fluid bg-primary bg-icon py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h2 class="display-6 text-white mb-3">Facts and Figures</h2>
+                <p class="text-white mb-0">A detailed financial plan is available upon request.</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <i class="fas fa-building fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-1">Name of Company</h5>
+                        <p class="mb-0 fw-bold">Chipunga Farm Limited</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <i class="fas fa-seedling fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-1">Sector</h5>
+                        <p class="mb-0 fw-bold">Agribusiness</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <i class="fas fa-map-marked-alt fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-1">Size of the Farm</h5>
+                        <p class="mb-0 fw-bold">287 ha</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <i class="fas fa-dollar-sign fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-1">Required Investment</h5>
+                        <p class="mb-0 fw-bold">$1.5 mln</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <i class="fas fa-hand-holding-heart fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-1">Acquired Investment</h5>
+                        <p class="mb-0 fw-bold">$0.5 mln</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <i class="fas fa-chart-pie fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-1">Type of Investment</h5>
+                        <p class="mb-0 fw-bold">Impact Investment</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-1">Max Coffee Capacity</h5>
+                        <p class="mb-0 fw-bold">2025</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-1">Max Macadamia Capacity</h5>
+                        <p class="mb-0 fw-bold">2024</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <i class="fas fa-money-bill-wave fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-1">First Positive Cash Flows</h5>
+                        <p class="mb-0 fw-bold">2023</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-1">OGS Beneficiaries</h5>
+                        <p class="mb-0 fw-bold">500</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts and Figures End -->
+
+    <!-- Envisaged Impact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="display-6 mb-4 text-center">Envisaged Impact of The Farm</h2>
+                </div>
+            </div>
+            <div class="row g-4 mt-2">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="investment-card">
+                        <i class="fa fa-briefcase fa-2x text-primary mb-3"></i>
+                        <h5>Job Generation</h5>
+                        <p class="mb-0">Job generation in an area where employment opportunities are very scarce.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="investment-card">
+                        <i class="fa fa-shield-alt fa-2x text-primary mb-3"></i>
+                        <h5>Health & Safety</h5>
+                        <p class="mb-0">Promote Health and Safety Policy and Procedures on the Farm and surrounding communities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="investment-card">
+                        <i class="fa fa-globe fa-2x text-primary mb-3"></i>
+                        <h5>Industry Growth</h5>
+                        <p class="mb-0">Stimulate the overall Malawi Coffee and Macadamia industries by promoting Malawi coffee and macadamia to overseas markets.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="investment-card">
+                        <i class="fa fa-wallet fa-2x text-primary mb-3"></i>
+                        <h5>Increased Income</h5>
+                        <p class="mb-0">Increase in disposable income of the local population of Chipunga.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="investment-card">
+                        <i class="fa fa-chalkboard-teacher fa-2x text-primary mb-3"></i>
+                        <h5>Farmer Training</h5>
+                        <p class="mb-0">Training surrounding local farmers to improve yields of their own coffee and macadamia through the Out Growers Programme.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="investment-card">
+                        <i class="fa fa-road fa-2x text-primary mb-3"></i>
+                        <h5>Infrastructure Development</h5>
+                        <p class="mb-0">Development of roads and energy services in the Chipunga area as well as an Integrated Water Resources Management Plan for the area.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Envisaged Impact End -->
 
     <!-- Meet Our Team Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5 bg-light">
         <div class="container">
             <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h1 class="display-5 mb-3">Meet Our Leadership Team</h1>
@@ -269,7 +577,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="team-item bg-light">
                         <div class="team-img">
-                            <img src="img/joseph-mkinga.jpg.jpeg" alt="Junior Mwiba - Agribusiness Accountant" class="img-fluid">
+                            <img src="img/team/junior-mwiba.jpg" alt="Junior Mwiba - Agribusiness Accountant" class="img-fluid">
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -288,7 +596,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
                         <div class="team-img">
-                            <img src="img/adams-mhone.jpg.jpeg" alt="Adams Mhone - Farm Manager" class="img-fluid">
+                            <img src="img/team/adams-mhone.jpg" alt="Adams Mhone - Farm Manager" class="img-fluid">
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -326,7 +634,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item bg-light">
                         <div class="team-img">
-                            <img src="img/kelvin-chidzuwa.jpg.jpeg" alt="Kelvin Chidzuwa - Outgrowers Coordinator" class="img-fluid">
+                            <img src="img/team/kelvin-chidzuwa.jpg" alt="Kelvin Chidzuwa - Outgrowers Coordinator" class="img-fluid">
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -336,7 +644,7 @@
                         <div class="text-center p-4">
                             <span class="team-position-badge">Outgrowers Coordinator</span>
                             <h5 class="mb-1">Kelvin Chidzuwa</h5>
-                            <p class="mt-3 mb-0 small">Manages relationships with over 50 outgrower farmers, providing training and support for quality production.</p>
+                            <p class="mt-3 mb-0 small">Manages relationships with over 500 outgrower farmers, providing training and support for quality production.</p>
                         </div>
                     </div>
                 </div>
@@ -344,43 +652,6 @@
         </div>
     </div>
     <!-- Meet Our Team End -->
-
-    <!-- Stats Section Start -->
-    <div class="container-fluid bg-primary bg-icon py-5">
-        <div class="container">
-            <div class="row g-4 text-center">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="text-white">
-                        <i class="fa fa-leaf fa-3x mb-3"></i>
-                        <h2 class="display-6 text-white">15+</h2>
-                        <p class="mb-0">Years of Experience</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="text-white">
-                        <i class="fa fa-users fa-3x mb-3"></i>
-                        <h2 class="display-6 text-white">50+</h2>
-                        <p class="mb-0">Outgrowers</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="text-white">
-                        <i class="fa fa-tractor fa-3x mb-3"></i>
-                        <h2 class="display-6 text-white">500+</h2>
-                        <p class="mb-0">Acres Under Cultivation</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="text-white">
-                        <i class="fa fa-globe fa-3x mb-3"></i>
-                        <h2 class="display-6 text-white">10+</h2>
-                        <p class="mb-0">Export Markets</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Stats Section End -->
 
     <!-- Firm Visit Start -->
     <div class="container-fluid bg-primary bg-icon mt-5 py-6">
@@ -403,7 +674,7 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h1 class="fw-bold text-primary mb-4">CHIPUNGA<span class="text-secondary">FARMS/span>LTD</h1>
+                    <h1 class="fw-bold text-primary mb-4">CHIPUNGA<span class="text-secondary">FARM</span>LTD</h1>
                     <p>Premium coffee, macadamia nuts, and honey from the fertile lands of Mzuzu, Malawi.</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-1" href="#"><i class="fab fa-twitter"></i></a>
@@ -415,8 +686,8 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
                     <p><i class="fa fa-map-marker-alt me-3"></i>PO Box 345, Mzuzu, Malawi</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+265 888 123 456</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@chipungafarm.mw</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+265 123 456 789</p>
+                    <p><i class="fa fa-envelope me-3"></i>chipungafarmsltd@gmail.com</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
@@ -426,6 +697,7 @@
                     <a class="btn btn-link" href="Out_Growers_Scheme.html">Outgrowers Scheme</a>
                     <a class="btn btn-link" href="gallery.html">Gallery</a>
                     <a class="btn btn-link" href="blog.html">Blog</a>
+                    <a class="btn btn-link" href="policies.html">Policies & Resources</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
@@ -441,7 +713,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Chipunga Farm Ltd</a>, All Right Reserved.
+                        &copy; <a href="#">Chipunga Farms Limited</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         Designed By <a href="#">Himawari Holdings</a>
