@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Chipunga Farm</title>
+    <title>Chipunga Farms Limited - Investor Relations</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -29,6 +29,250 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #8B6B4D;
+            --primary-rgb: 139, 107, 77;
+            --primary-light: rgba(139, 107, 77, 0.1);
+            --primary-dark: #6B4E3B;
+            --coffee: #6B4E3B;
+            --macadamia: #8B6B4D;
+            --honey: #DAA520;
+        }
+
+        .investor-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .fact-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid rgba(139, 107, 77, 0.1);
+        }
+
+        .fact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(139, 107, 77, 0.15);
+        }
+
+        .fact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .fact-icon i {
+            font-size: 28px;
+            color: var(--primary);
+        }
+
+        .fact-value {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+
+        .fact-label {
+            color: #6c757d;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Product Category Cards */
+        .product-category-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+        }
+
+        .product-category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(139, 107, 77, 0.2);
+        }
+
+        .product-category-header {
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .product-category-header.coffee {
+            background: linear-gradient(135deg, #5D3A1A, #8B5A2B);
+        }
+
+        .product-category-header.macadamia {
+            background: linear-gradient(135deg, #6B4E3B, #8B6B4D);
+        }
+
+        .product-category-header.honey {
+            background: linear-gradient(135deg, #B8860B, #DAA520);
+        }
+
+        .product-category-header i {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .product-category-header h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .product-category-body {
+            padding: 25px;
+            background: white;
+        }
+
+        .product-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .product-stat:last-child {
+            border-bottom: none;
+        }
+
+        .product-stat .label {
+            color: #6c757d;
+        }
+
+        .product-stat .value {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+            border-left: 3px solid var(--primary-light);
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        .timeline-year {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .investment-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            border: 1px solid rgba(139, 107, 77, 0.1);
+        }
+
+        .investment-card.highlight {
+            background: var(--primary);
+            color: white;
+        }
+
+        .investment-card.highlight .btn {
+            background: white;
+            color: var(--primary);
+            border: 2px solid white;
+        }
+
+        .investment-card.highlight .btn:hover {
+            background: transparent;
+            color: white;
+        }
+
+        .placeholder-note {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .placeholder-note i {
+            font-size: 18px;
+        }
+
+        .product-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .product-tab-btn {
+            padding: 12px 30px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .product-tab-btn:hover,
+        .product-tab-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .product-tab-btn.coffee:hover,
+        .product-tab-btn.coffee.active {
+            background: #5D3A1A;
+            border-color: #5D3A1A;
+        }
+
+        .product-tab-btn.macadamia:hover,
+        .product-tab-btn.macadamia.active {
+            background: #6B4E3B;
+            border-color: #6B4E3B;
+        }
+
+        .product-tab-btn.honey:hover,
+        .product-tab-btn.honey.active {
+            background: #B8860B;
+            border-color: #B8860B;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,747 +282,418 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
-<div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-    <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
-        <div class="col-lg-6 px-5 text-start">
-            <small><i class="fa fa-map-marker-alt me-2"></i>PO Box 345, Mzuzu, Malawi</small>
-            <small class="ms-4"><i class="fa fa-envelope me-2"></i>chipungafarmsltd@gmail.com</small>
-        </div>
-        <div class="col-lg-6 px-5 text-end">
-            <small>Follow us:</small>
-            <a class="text-body ms-3" href="https://www.facebook.com/people/Chipunga-Farms-Limited/61559891468609/?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-            <a class="text-body ms-3" href="#"><i class="fab fa-twitter"></i></a>
-            <a class="text-body ms-3" href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a class="text-body ms-3" href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
-
-    <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <div class="d-flex align-items-center">
-                <img src="img/logo.png" alt="Chipunga Farm Logo" class="me-2" style="height: 150px; max-width: 200px;">
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>PO Box 345, Mzuzu, Malawi</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>chipungafarmsltd@gmail.com</small>
             </div>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="product.html" class="nav-item nav-link active">Products</a>
-                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
-                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="feature.html" class="dropdown-item">Our Features</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-body ms-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-body ms-3" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="text-body ms-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-body ms-3" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <div class="d-flex align-items-center">
+                    <img src="img/logo.png" alt="Chipunga Farm Logo" class="me-2" style="height: 150px; max-width: 200px;">
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="product.html" class="nav-item nav-link">Products</a>
+                    <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="feature.html" class="dropdown-item">Our Features</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                            <a href="investors.html" class="dropdown-item active">Investor Relations</a>
+                            <a href="careers.html" class="dropdown-item">Careers</a>
+                            <a href="faq.html" class="dropdown-item">FAQ</a>
+                            <a href="partners.html" class="dropdown-item">Partners</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                        <small class="fa fa-search text-body"></small>
+                    </a>
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                        <small class="fa fa-user text-body"></small>
+                    </a>
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                        <small class="fa fa-shopping-bag text-body"></small>
+                    </a>
+                </div>
             </div>
-            <div class="d-none d-lg-flex ms-2">
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
-                    <small class="fa fa-search text-body"></small>
-                </a>
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
-                    <small class="fa fa-user text-body"></small>
-                </a>
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
-                    <small class="fa fa-shopping-bag text-body"></small>
-                </a>
-            </div>
-        </div>
-    </nav>
-</div>
-<!-- Navbar End -->
-
+        </nav>
+    </div>
+    <!-- Navbar End -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
-            <h1 class="display-3 mb-3 animated slideInDown">Products</h1>
+            <h1 class="display-3 mb-3 animated slideInDown">Investor Relations</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a class="text-body" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-body" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-dark active" aria-current="page">Products</li>
+                    <li class="breadcrumb-item"><a class="text-body" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-body" href="#">More</a></li>
+                    <li class="breadcrumb-item text-dark active" aria-current="page">Investor Relations</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
+    <!-- Investor Header Start -->
+    <div class="investor-header wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <h2 class="display-5 text-white mb-3">Invest in Premium Coffee, Macadamia & Honey</h2>
+            <p class="text-white mb-0 mx-auto" style="max-width: 800px;">Join us in building a sustainable agribusiness focused on Malawi's finest export crops: Arabica coffee, macadamia nuts, and pure honey.</p>
+        </div>
+    </div>
+    <!-- Investor Header End -->
 
-    <!-- Product Start -->
+    <!-- Product Categories Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-0 gx-5 align-items-end">
-                <div class="col-lg-6">
-                    <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                        <h1 class="display-5 mb-3">Our Products</h1>
-                        <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
-                    <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
-                        <li class="nav-item me-2">
-                            <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">Vegetable</a>
-                        </li>
-                        <li class="nav-item me-2">
-                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2">Fruits </a>
-                        </li>
-                        <li class="nav-item me-0">
-                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-3">Fresh</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h2 class="display-6 mb-3">Our Investment Portfolio</h2>
+                <p class="text-muted">Three premium product lines driving our growth strategy</p>
             </div>
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-4">
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
+            <div class="row g-4">
+                <!-- Coffee Card -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="product-category-card">
+                        <div class="product-category-header coffee">
+                            <i class="fas fa-mug-hot"></i>
+                            <h3>Coffee</h3>
+                            <p class="mb-0">Premium Arabica</p>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                        <div class="product-category-body">
+                            <div class="product-stat">
+                                <span class="label">Planted Area</span>
+                                <span class="value">150 ha</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                            <div class="product-stat">
+                                <span class="label">Full Capacity</span>
+                                <span class="value">2025</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                            <div class="product-stat">
+                                <span class="label">Processing</span>
+                                <span class="value">Mzuzu Coffee Authority</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                            <div class="product-stat">
+                                <span class="label">Market</span>
+                                <span class="value">Local & Export</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More Products</a>
+                            <p class="mt-3 mb-0 small text-muted">High-quality Arabica coffee berries with rich, distinctive flavor profile.</p>
                         </div>
                     </div>
                 </div>
-                <div id="tab-2" class="tab-pane fade show p-0">
-                    <div class="row g-4">
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
+                <!-- Macadamia Card -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="product-category-card">
+                        <div class="product-category-header macadamia">
+                            <i class="fas fa-seedling"></i>
+                            <h3>Macadamia</h3>
+                            <p class="mb-0">Premium Nuts</p>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                        <div class="product-category-body">
+                            <div class="product-stat">
+                                <span class="label">Planted Area</span>
+                                <span class="value">100 ha</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                            <div class="product-stat">
+                                <span class="label">Full Capacity</span>
+                                <span class="value">2024</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                            <div class="product-stat">
+                                <span class="label">Processing</span>
+                                <span class="value">Tropha Farm</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                            <div class="product-stat">
+                                <span class="label">Market</span>
+                                <span class="value">Export Focus</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center">
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More Products</a>
+                            <p class="mt-3 mb-0 small text-muted">High-quality macadamia nuts from our orchards and outgrower network.</p>
                         </div>
                     </div>
                 </div>
-                <div id="tab-3" class="tab-pane fade show p-0">
-                    <div class="row g-4">
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
+                <!-- Honey Card -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-category-card">
+                        <div class="product-category-header honey">
+                            <i class="fas fa-bug"></i>
+                            <h3>Honey</h3>
+                            <p class="mb-0">Pure & Natural</p>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                        <div class="product-category-body">
+                            <div class="product-stat">
+                                <span class="label">Apiaries</span>
+                                <span class="value">Expanding</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                            <div class="product-stat">
+                                <span class="label">Type</span>
+                                <span class="value">Wild & Cultivated</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                            <div class="product-stat">
+                                <span class="label">Processing</span>
+                                <span class="value">On-farm</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
+                            <div class="product-stat">
+                                <span class="label">Market</span>
+                                <span class="value">Local & Regional</span>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="product-item">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
-                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">Mk9000</span>
-                                    <span class="text-body text-decoration-line-through"></span>
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center">
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More Products</a>
+                            <p class="mt-3 mb-0 small text-muted">Pure, natural honey from our apiaries in acacia forest areas.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Product End -->
+    <!-- Product Categories End -->
 
-
-    <!-- Firm Visit Start -->
-    <div class="container-fluid bg-primary bg-icon mt-5 py-6">
+    <!-- Investment Overview Start -->
+    <div class="container-fluid bg-light py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-md-7 wow fadeIn" data-wow-delay="0.1s">
-                    <h1 class="display-5 text-white mb-3">Visit Our Firm</h1>
-                    <p class="text-white mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="display-6 mb-4">Investment at a Glance</h2>
+                    <p class="mb-4">Chipunga Farms Limited presents a unique opportunity to invest in a <strong>287-hectare greenfield plantation</strong> in Nkhatabay District, Northern Malawi, focused on three premium products: coffee, macadamia, and honey.</p>
+                    
+                    <!-- Placeholder note for client -->
+                    <div class="placeholder-note">
+                        <i class="fas fa-info-circle"></i>
+                        <span><strong>Note to client:</strong> Please update the investment figures and add your detailed financial prospectus when available.</span>
+                    </div>
+
+                    <div class="row g-4 mt-4">
+                        <div class="col-6">
+                            <div class="fact-value">$1.5M</div>
+                            <div class="fact-label">Total Investment Required</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fact-value">$0.5M</div>
+                            <div class="fact-label">Already Secured</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fact-value">287 ha</div>
+                            <div class="fact-label">Total Farm Size</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fact-value">2023</div>
+                            <div class="fact-label">First Positive Cash Flow</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-5 text-md-end wow fadeIn" data-wow-delay="0.5s">
-                    <a class="btn btn-lg btn-secondary rounded-pill py-3 px-5" href="">Visit Now</a>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <img class="img-fluid rounded" src="img/investment-overview.jpg" alt="Investment Overview" onerror="this.src='img/about.png'">
                 </div>
             </div>
         </div>
     </div>
-    <!-- Firm Visit End -->
+    <!-- Investment Overview End -->
 
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid bg-light bg-icon py-6">
+    <!-- Product Timeline Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-5 mb-3">Customer Review</h1>
-                <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item position-relative bg-white p-5 mt-4">
-                    <i class="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <div class="d-flex align-items-center">
-                        <img class="flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" alt="">
-                        <div class="ms-3">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="display-6 mb-4">Product Timelines</h2>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-title">First Positive Annual Cash Flow</div>
+                        <p class="text-muted">Expected across all product lines based on current projections.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-title">Macadamia Full Capacity</div>
+                        <p class="text-muted">100 hectares of macadamia at full production capacity.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-title">Coffee Full Capacity</div>
+                        <p class="text-muted">150 hectares of coffee at full production. Cumulative return anticipated.</p>
                     </div>
                 </div>
-                <div class="testimonial-item position-relative bg-white p-5 mt-4">
-                    <i class="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <div class="d-flex align-items-center">
-                        <img class="flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" alt="">
-                        <div class="ms-3">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="investment-card h-100">
+                        <h4 class="mb-4">Processing Strategy by Product</h4>
+                        <div class="mb-3">
+                            <h5 class="text-primary"><i class="fas fa-mug-hot me-2"></i>Coffee</h5>
+                            <p class="ms-4"><strong>Short-term:</strong> Processed at Mzuzu Coffee Authority (22km)<br>
+                            <strong>Long-term:</strong> On-farm washing station at full capacity</p>
                         </div>
-                    </div>
-                </div>
-                <div class="testimonial-item position-relative bg-white p-5 mt-4">
-                    <i class="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <div class="d-flex align-items-center">
-                        <img class="flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" alt="">
-                        <div class="ms-3">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                        <div class="mb-3">
+                            <h5 class="text-primary"><i class="fas fa-seedling me-2"></i>Macadamia</h5>
+                            <p class="ms-4"><strong>Ongoing:</strong> Processed by Tropha Farm near Mzuzu City</p>
                         </div>
-                    </div>
-                </div>
-                <div class="testimonial-item position-relative bg-white p-5 mt-4">
-                    <i class="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <div class="d-flex align-items-center">
-                        <img class="flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg" alt="">
-                        <div class="ms-3">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                        <div class="mb-0">
+                            <h5 class="text-primary"><i class="fas fa-bug me-2"></i>Honey</h5>
+                            <p class="ms-4"><strong>Ongoing:</strong> On-farm processing and packaging</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+    <!-- Product Timeline End -->
 
+    <!-- Investment Opportunities Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h2 class="display-6 mb-3">Investment Opportunities by Product</h2>
+                <p class="text-muted">Choose your focus area or invest across all three categories</p>
+            </div>
+            
+            <!-- Product Tabs -->
+            <div class="product-tabs wow fadeInUp" data-wow-delay="0.2s">
+                <button class="product-tab-btn coffee active" data-product="all">All Products</button>
+                <button class="product-tab-btn coffee" data-product="coffee">Coffee</button>
+                <button class="product-tab-btn macadamia" data-product="macadamia">Macadamia</button>
+                <button class="product-tab-btn honey" data-product="honey">Honey</button>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="investment-card">
+                        <i class="fas fa-hand-holding-usd fa-3x text-primary mb-3"></i>
+                        <h4 class="mb-3">Equity Investment</h4>
+                        <p class="mb-4">Partner with us as a shareholder and share in the long-term success across all product lines.</p>
+                        <p class="text-muted small mb-0">Minimum investment: <strong>$50,000</strong></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="investment-card">
+                        <i class="fas fa-hand-holding-heart fa-3x text-primary mb-3"></i>
+                        <h4 class="mb-3">Product-Specific Investment</h4>
+                        <p class="mb-4">Focus your investment on a specific product line - coffee, macadamia, or honey.</p>
+                        <p class="text-muted small mb-0">Minimum: <strong>$25,000 per product</strong></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="investment-card highlight">
+                        <i class="fas fa-globe-africa fa-3x text-white mb-3"></i>
+                        <h4 class="text-white mb-3">Impact Investment</h4>
+                        <p class="text-white mb-4">For investors prioritizing social and environmental returns alongside financial gains.</p>
+                        <a href="contact.html" class="btn btn-light rounded-pill py-2 px-4">Discuss Impact Options</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Investment Opportunities End -->
+
+    <!-- Impact Metrics Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="display-6 mb-4">Impact Investment Criteria</h2>
+                    <p class="mb-4">We are confident that Chipunga Farm meets the criteria for impact investment through:</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>Job creation</strong> - 60 permanent, 100 temporary positions</li>
+                        <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>500+ smallholder farmers</strong> supported through Outgrower Scheme</li>
+                        <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>Integrated Water Resources Management</strong> for sustainability</li>
+                        <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>Community development</strong> including roads and energy services</li>
+                        <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>Knowledge transfer</strong> to future farms like Kajikhomele</li>
+                    </ul>
+                    
+                    <div class="placeholder-note mt-4">
+                        <i class="fas fa-file-pdf"></i>
+                        <span><strong>Note:</strong> A detailed financial plan is available upon request. Please contact us for the complete prospectus.</span>
+                    </div>
+                </div>
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-primary text-white p-5 rounded">
+                        <h4 class="text-white mb-4">Request Investment Information</h4>
+                        <p class="text-white mb-4">Interested in learning more? Contact our investment team for a detailed prospectus and financial model.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control bg-white bg-opacity-25 border-0 text-white" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control bg-white bg-opacity-25 border-0 text-white" placeholder="Email Address">
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control bg-white bg-opacity-25 border-0 text-white">
+                                    <option>Select Investment Type</option>
+                                    <option>Equity</option>
+                                    <option>Product-Specific</option>
+                                    <option>Impact</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control bg-white bg-opacity-25 border-0 text-white">
+                                    <option>Select Product Focus</option>
+                                    <option>Coffee</option>
+                                    <option>Macadamia</option>
+                                    <option>Honey</option>
+                                    <option>All Products</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-light w-100 py-2">Send Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Impact Metrics End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h1 class="fw-bold text-primary mb-4">CHIPUNGA<span class="text-secondary">FARMS/span>LTD</h1>
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
+                    <h1 class="fw-bold text-primary mb-4">CHIPUNGA<span class="text-secondary">FARM</span>LTD</h1>
+                    <p>Premium coffee, macadamia nuts, and honey from the fertile lands of Mzuzu, Malawi.</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.facebook.com/people/Chipunga-Farms-Limited/61559891468609/?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>PO Box 611
-Mzuzu / Malawi</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>PO Box 345, Mzuzu, Malawi</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+265 123 456 789</p>
                     <p><i class="fa fa-envelope me-3"></i>chipungafarmsltd@gmail.com</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="product.html">Our Products</a>
+                    <a class="btn btn-link" href="Out_Growers_Scheme.html">Outgrowers Scheme</a>
+                    <a class="btn btn-link" href="gallery.html">Gallery</a>
+                    <a class="btn btn-link" href="investors.html">Investor Relations</a>
+                    <a class="btn btn-link" href="careers.html">Careers</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="partners.html">Partners</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <p>Subscribe to get updates about our harvest and products.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
@@ -790,11 +705,10 @@ Mzuzu / Malawi</p>
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Chipunga Farms LTD</a>, All Right Reserved.
+                        &copy; <a href="#">Chipunga Farms Limited</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="">Himawari Holdings</a>
+                        Designed By <a href="#">Himawari Holdings</a>
                     </div>
                 </div>
             </div>
@@ -802,10 +716,8 @@ Mzuzu / Malawi</p>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -817,6 +729,22 @@ Mzuzu / Malawi</p>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Product Filter Script -->
+    <script>
+        $(document).ready(function() {
+            // Product tab functionality (for future expansion)
+            $('.product-tab-btn').click(function() {
+                $('.product-tab-btn').removeClass('active');
+                $(this).addClass('active');
+                
+                var product = $(this).data('product');
+                
+                // This can be expanded later to filter investment cards
+                console.log('Selected product: ' + product);
+            });
+        });
+    </script>
 </body>
 
 </html>
