@@ -98,6 +98,182 @@
             margin-bottom: 10px;
         }
         
+        /* Professional Team Card Styles */
+        .team-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(139, 107, 77, 0.15);
+        }
+        
+        .team-card-inner {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .team-image-wrapper {
+            position: relative;
+            height: 320px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .team-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .team-card:hover .team-image {
+            transform: scale(1.05);
+        }
+        
+        .team-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #8B6B4D 0%, #6B4E3B 100%);
+        }
+        
+        .team-placeholder i {
+            font-size: 100px;
+            color: rgba(255,255,255,0.3);
+        }
+        
+        .team-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 30px 20px 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .team-card:hover .team-overlay {
+            opacity: 1;
+        }
+        
+        .team-social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .social-link {
+            width: 38px;
+            height: 38px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8B6B4D;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        
+        .team-card:hover .social-link {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .social-link:hover {
+            background: #8B6B4D;
+            color: white;
+            transform: rotate(360deg);
+        }
+        
+        .social-link:nth-child(1) { transition-delay: 0.05s; }
+        .social-link:nth-child(2) { transition-delay: 0.1s; }
+        .social-link:nth-child(3) { transition-delay: 0.15s; }
+        
+        .team-info {
+            padding: 24px;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .team-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: linear-gradient(135deg, #8B6B4D 0%, #6B4E3B 100%);
+            color: white;
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            align-self: center;
+        }
+        
+        .team-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #2C1810;
+        }
+        
+        .team-bio {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        
+        .team-divider {
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(90deg, #8B6B4D, transparent);
+            margin: 15px auto;
+        }
+        
+        .team-stats {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .team-stat {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .stat-value {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #8B6B4D;
+        }
+        
+        .stat-label {
+            display: block;
+            font-size: 0.7rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
         /* New styles for the investment section */
         .investment-card {
             background: white;
@@ -198,64 +374,64 @@
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
-<div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-    <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
-        <div class="col-lg-6 px-5 text-start">
-            <small><i class="fa fa-map-marker-alt me-2"></i>PO Box 345, Mzuzu, Malawi</small>
-            <small class="ms-4"><i class="fa fa-envelope me-2"></i>chipungafarmsltd@gmail.com</small>
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>PO Box 345, Mzuzu, Malawi</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>chipungafarmsltd@gmail.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-body ms-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-body ms-3" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="text-body ms-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-body ms-3" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-        <div class="col-lg-6 px-5 text-end">
-            <small>Follow us:</small>
-            <a class="text-body ms-3" href="#"><i class="fab fa-facebook-f"></i></a>
-            <a class="text-body ms-3" href="#"><i class="fab fa-twitter"></i></a>
-            <a class="text-body ms-3" href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a class="text-body ms-3" href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <div class="d-flex align-items-center">
-                <img src="img/logo.png" alt="Chipunga Farm Logo" class="me-2" style="height: 150px; max-width: 200px;">
-            </div>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link active">About Us</a>
-                <a href="product.html" class="nav-item nav-link">Products</a>
-                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
-                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="feature.html" class="dropdown-item">Our Features</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
+        <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <div class="d-flex align-items-center">
+                    <img src="img/logo.png" alt="Chipunga Farm Logo" class="me-2" style="height: 150px; max-width: 200px;">
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link active">About Us</a>
+                    <a href="product.html" class="nav-item nav-link">Products</a>
+                    <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="feature.html" class="dropdown-item">Our Features</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                        <small class="fa fa-search text-body"></small>
+                    </a>
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                        <small class="fa fa-user text-body"></small>
+                    </a>
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                        <small class="fa fa-shopping-bag text-body"></small>
+                    </a>
+                </div>
             </div>
-            <div class="d-none d-lg-flex ms-2">
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
-                    <small class="fa fa-search text-body"></small>
-                </a>
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
-                    <small class="fa fa-user text-body"></small>
-                </a>
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
-                    <small class="fa fa-shopping-bag text-body"></small>
-                </a>
-            </div>
-        </div>
-    </nav>
-</div>
-<!-- Navbar End -->
+        </nav>
+    </div>
+    <!-- Navbar End -->
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -311,8 +487,8 @@
                             <i class="fas fa-industry"></i>
                         </div>
                         <h4 class="mb-3">Processing Strategy</h4>
-                        <p class="mb-4">Currently, all harvested coffee berries and macadamia nuts are processed at Chipunga Farm, ensuring full control over quality, traceability, and operational efficiency from harvest to finished product. Coffee berries are processed into washed green beans on-site through the farm’s existing processing systems, while macadamia nuts are also processed directly at Chipunga Farm. This integrated approach allows the farm to maintain high product standards, reduce reliance on external processors, and maximize operational efficiency.</p>
-                        <p class="mb-0">As coffee production continues to expand toward full capacity, Chipunga Farm is scaling and strengthening its on-site processing operations to efficiently manage increased volumes while maintaining quality. This self-sustaining processing model reinforces the farm’s commitment to value addition, cost efficiency, and long-term agricultural sustainability.</p>
+                        <p class="mb-4">Currently, all harvested coffee berries and macadamia nuts are processed at Chipunga Farm, ensuring full control over quality, traceability, and operational efficiency from harvest to finished product. Coffee berries are processed into washed green beans on-site through the farm's existing processing systems, while macadamia nuts are also processed directly at Chipunga Farm. This integrated approach allows the farm to maintain high product standards, reduce reliance on external processors, and maximize operational efficiency.</p>
+                        <p class="mb-0">As coffee production continues to expand toward full capacity, Chipunga Farm is scaling and strengthening its on-site processing operations to efficiently manage increased volumes while maintaining quality. This self-sustaining processing model reinforces the farm's commitment to value addition, cost efficiency, and long-term agricultural sustainability.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -546,105 +722,221 @@
     </div>
     <!-- Envisaged Impact End -->
 
-    <!-- Meet Our Team Start -->
+    <!-- Meet Our Team Start - Professional Redesign -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
-            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
                 <h1 class="display-5 mb-3">Meet Our Leadership Team</h1>
-                <p>The dedicated professionals behind Chipunga Farm's success</p>
+                <p class="lead">The dedicated professionals driving Chipunga Farm's vision for sustainable agriculture and excellence</p>
             </div>
             <div class="row g-4">
                 <!-- Team Member 1 - Joseph Mkinga, General Manager -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="team-img">
-                            <img src="img/joseph-mkinga.jpg.jpeg" alt="Joseph Mkinga - General Manager" class="img-fluid">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="mailto:joseph@chipungafarm.mw"><i class="fa fa-envelope"></i></a>
+                    <div class="team-card">
+                        <div class="team-card-inner">
+                            <div class="team-image-wrapper">
+                                <img src="img/joseph-mkinga.jpg.jpeg" alt="Joseph Mkinga - General Manager" class="team-image" onerror="this.parentElement.innerHTML='<div class=&#39;team-placeholder&#39;><i class=&#39;fas fa-user-circle&#39;></i></div>' + this.parentElement.innerHTML">
+                                <div class="team-overlay">
+                                    <div class="team-social-links">
+                                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                        <a href="mailto:joseph@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <span class="team-position-badge">General Manager</span>
-                            <h5 class="mb-1">Joseph Mkinga</h5>
-                            <p class="mt-3 mb-0 small">Leading Chipunga Farm with over 20 years of experience in agricultural management and export operations.</p>
+                            <div class="team-info">
+                                <div class="team-badge">General Manager</div>
+                                <h3 class="team-name">Joseph Mkinga</h3>
+                                <p class="team-bio">Leading Chipunga Farm with over 20 years of experience in agricultural management, export operations, and strategic farm development across Malawi.</p>
+                                <div class="team-divider"></div>
+                                <div class="team-stats">
+                                    <div class="team-stat">
+                                        <span class="stat-value">20+</span>
+                                        <span class="stat-label">Years Exp</span>
+                                    </div>
+                                    <div class="team-stat">
+                                        <span class="stat-value">287</span>
+                                        <span class="stat-label">Hectares</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Team Member 2 - Junior Mwiba, Agribusiness Accountant -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="team-item bg-light">
-                        <div class="team-img">
-                            <img src="" alt="Junior Mwiba - Agribusiness Accountant" class="img-fluid">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="mailto:junior@chipungafarm.mw"><i class="fa fa-envelope"></i></a>
+                    <div class="team-card">
+                        <div class="team-card-inner">
+                            <div class="team-image-wrapper">
+                                <div class="team-placeholder">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div class="team-overlay">
+                                    <div class="team-social-links">
+                                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                        <a href="mailto:junior@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <span class="team-position-badge">Agribusiness Accountant</span>
-                            <h5 class="mb-1">Junior Mwiba</h5>
-                            <p class="mt-3 mb-0 small">Expert in agricultural finance, ensuring sustainable growth and financial integrity across all operations.</p>
+                            <div class="team-info">
+                                <div class="team-badge">Agribusiness Accountant</div>
+                                <h3 class="team-name">Junior Mwiba</h3>
+                                <p class="team-bio">Expert in agricultural finance, financial modeling, and sustainable growth strategies. Ensures financial integrity across all farm operations.</p>
+                                <div class="team-divider"></div>
+                                <div class="team-stats">
+                                    <div class="team-stat">
+                                        <span class="stat-value">$1.5M</span>
+                                        <span class="stat-label">Budget</span>
+                                    </div>
+                                    <div class="team-stat">
+                                        <span class="stat-value">10+</span>
+                                        <span class="stat-label">Years Exp</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Team Member 3 - Adams Mhone, Farm Manager -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="team-img">
-                            <img src="img/adams-mhone.jpg.jpeg" alt="Adams Mhone - Farm Manager" class="img-fluid">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="mailto:adams@chipungafarm.mw"><i class="fa fa-envelope"></i></a>
+                    <div class="team-card">
+                        <div class="team-card-inner">
+                            <div class="team-image-wrapper">
+                                <img src="img/adams-mhone.jpg.jpeg" alt="Adams Mhone - Farm Manager" class="team-image" onerror="this.parentElement.innerHTML='<div class=&#39;team-placeholder&#39;><i class=&#39;fas fa-user-circle&#39;></i></div>' + this.parentElement.innerHTML">
+                                <div class="team-overlay">
+                                    <div class="team-social-links">
+                                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                        <a href="mailto:adams@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <span class="team-position-badge">Farm Manager</span>
-                            <h5 class="mb-1">Adams Mhone</h5>
-                            <p class="mt-3 mb-0 small">Oversees all farming operations, specializing in coffee and macadamia cultivation with 15+ years experience.</p>
+                            <div class="team-info">
+                                <div class="team-badge">Farm Manager</div>
+                                <h3 class="team-name">Adams Mhone</h3>
+                                <p class="team-bio">Oversees all farming operations, specializing in coffee and macadamia cultivation with 15+ years experience in plantation management.</p>
+                                <div class="team-divider"></div>
+                                <div class="team-stats">
+                                    <div class="team-stat">
+                                        <span class="stat-value">250</span>
+                                        <span class="stat-label">Acres</span>
+                                    </div>
+                                    <div class="team-stat">
+                                        <span class="stat-value">15+</span>
+                                        <span class="stat-label">Years Exp</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Team Member 4 - Grace Msiska, Quality Supervisor -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="team-item bg-light">
-                        <div class="team-img">
-                            <img src="img/grace.jpg" alt="Grace Msiska - Quality Supervisor" class="img-fluid">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="mailto:grace@chipungafarm.mw"><i class="fa fa-envelope"></i></a>
+               
+            <!-- Team Member 4 - Naomi Mughogho, Outgrowers Coordinator -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="team-card">
+                    <div class="team-card-inner">
+                        <div class="team-image-wrapper">
+                            <img src="img/grace.jpg" alt="Naomi Mughogho - Outgrowers Coordinator" class="team-image" onerror="this.parentElement.innerHTML='<div class=&#39;team-placeholder&#39;><i class=&#39;fas fa-user-circle&#39;></i></div>' + this.parentElement.innerHTML">
+                            <div class="team-overlay">
+                                <div class="team-social-links">
+                                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                    <a href="mailto:naomi@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center p-4">
-                            <span class="team-position-badge">Quality Supervisor</span>
-                            <h5 class="mb-1">Grace Msiska</h5>
-                            <p class="mt-3 mb-0 small">Ensures all products meet international quality standards through rigorous testing and quality control.</p>
+                        <div class="team-info">
+                            <div class="team-badge">Outgrowers Coordinator</div>
+                            <h3 class="team-name">Naomi Mughogho</h3>
+                            <p class="team-bio">Manages relationships with over 500 outgrower farmers, providing training and support for quality coffee and macadamia production.</p>
+                            <div class="team-divider"></div>
+                            <div class="team-stats">
+                                <div class="team-stat">
+                                    <span class="stat-value">500+</span>
+                                    <span class="stat-label">Farmers</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">8</span>
+                                    <span class="stat-label">Villages</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
                 
-                <!-- Team Member 5 - Kelvin Chidzuwa, Outgrowers Coordinator -->
+                <!-- Team Member 5 - Grace Msiska, Quality Supervisor -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="team-img">
-                            <img src="img/kelvin-chidzuwa.jpg.jpeg" alt="Kelvin Chidzuwa - Outgrowers Coordinator" class="img-fluid">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="mailto:kelvin@chipungafarm.mw"><i class="fa fa-envelope"></i></a>
+                    <div class="team-card">
+                        <div class="team-card-inner">
+                            <div class="team-image-wrapper">
+                                <div class="team-placeholder">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div class="team-overlay">
+                                    <div class="team-social-links">
+                                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                        <a href="mailto:grace@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-badge">Quality Supervisor</div>
+                                <h3 class="team-name">Grace Msiska</h3>
+                                <p class="team-bio">Ensures all products meet international quality standards through rigorous testing, quality control, and certification processes.</p>
+                                <div class="team-divider"></div>
+                                <div class="team-stats">
+                                    <div class="team-stat">
+                                        <span class="stat-value">100%</span>
+                                        <span class="stat-label">Quality Rate</span>
+                                    </div>
+                                    <div class="team-stat">
+                                        <span class="stat-value">12+</span>
+                                        <span class="stat-label">Years Exp</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center p-4">
-                            <span class="team-position-badge">Outgrowers Coordinator</span>
-                            <h5 class="mb-1">Kelvin Chidzuwa</h5>
-                            <p class="mt-3 mb-0 small">Manages relationships with over 500 outgrower farmers, providing training and support for quality production.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 6 - Kelvin Chidzuwa, Operations Manager -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="team-card">
+                        <div class="team-card-inner">
+                            <div class="team-image-wrapper">
+                                <div class="team-placeholder">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div class="team-overlay">
+                                    <div class="team-social-links">
+                                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                        <a href="mailto:kelvin@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-badge">Operations Manager</div>
+                                <h3 class="team-name">Kelvin Chidzuwa</h3>
+                                <p class="team-bio">Coordinates daily farm operations, logistics, and supply chain management to ensure efficient production and distribution.</p>
+                                <div class="team-divider"></div>
+                                <div class="team-stats">
+                                    <div class="team-stat">
+                                        <span class="stat-value">24/7</span>
+                                        <span class="stat-label">Operations</span>
+                                    </div>
+                                    <div class="team-stat">
+                                        <span class="stat-value">10+</span>
+                                        <span class="stat-label">Years Exp</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
