@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chipunga Farms Limited - Frequently Asked Questions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .faq-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            border-left: 4px solid #8B6B4D;
+        }
+        .faq-question {
+            color: #8B6B4D;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question:hover {
+            color: #6B4E3B;
+        }
+        .faq-answer {
+            color: #6c757d;
+            line-height: 1.6;
+            display: none;
+            padding-top: 10px;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 10px;
+        }
+        .faq-answer.show {
+            display: block;
+        }
+        .toggle-icon {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+        .faq-question.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #8B6B4D;
+            display: inline-block;
+        }
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .category-btn {
+            padding: 10px 25px;
+            border: 2px solid #8B6B4D;
+            background: transparent;
+            color: #8B6B4D;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .category-btn:hover,
+        .category-btn.active {
+            background: #8B6B4D;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+<div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
+        <div class="col-lg-6 px-5 text-start">
+            <small><i class="fa fa-map-marker-alt me-2"></i>PO Box 345, Mzuzu, Malawi</small>
+            <small class="ms-4"><i class="fa fa-envelope me-2"></i>chipungafarmsltd@gmail.com</small>
+        </div>
+        <div class="col-lg-6 px-5 text-end">
+            <small>Follow us:</small>
+            <a class="text-body ms-3" href="https://www.facebook.com/people/Chipunga-Farms-Limited/61559891468609/"><i class="fab fa-facebook-f"></i></a>
+            <a class="text-body ms-3" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="text-body ms-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a class="text-body ms-3" href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <div class="d-flex align-items-center">
+                <img src="img/logo.png" alt="Chipunga Farm Logo" class="me-2" style="height: 150px; max-width: 200px;">
+            </div>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="feature.html" class="dropdown-item">Our Features</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item active">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </div>
+            <div class="d-none d-lg-flex ms-2">
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                    <small class="fa fa-search text-body"></small>
+                </a>
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                    <small class="fa fa-user text-body"></small>
+                </a>
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="#">
+                    <small class="fa fa-shopping-bag text-body"></small>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-3 animated slideInDown">Frequently Asked Questions</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a class="text-body" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-body" href="#">More</a></li>
+                    <li class="breadcrumb-item text-dark active" aria-current="page">FAQ</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- FAQ Header Start -->
+    <div class="container-xxl py-3">
+        <div class="container text-center">
+            <h2 class="display-5 mb-3">Got Questions? We Have Answers</h2>
+            <p class="mb-0 mx-auto" style="max-width: 800px;">Find answers to the most common questions about Chipunga Farms Limited, our products, outgrower program, careers, and investment opportunities.</p>
+        </div>
+    </div>
+    <!-- FAQ Header End -->
+
+    <!-- Category Filters Start -->
+    <div class="container-xxl py-4">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-btn active" data-category="all">All Questions</button>
+                <button class="category-btn" data-category="farm">About the Farm</button>
+                <button class="category-btn" data-category="products">Products</button>
+                <button class="category-btn" data-category="outgrowers">Outgrowers</button>
+                <button class="category-btn" data-category="careers">Careers</button>
+                <button class="category-btn" data-category="investors">Investors</button>
+            </div>
+        </div>
+    </div>
+    <!-- Category Filters End -->
+
+    <!-- FAQ Grid Start -->
+    <div class="container-xxl py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto" id="faqGrid">
+
+                    <!-- Farm Category -->
+                    <div class="faq-category mb-4" data-category="farm">
+                        <h3 class="section-title">About the Farm</h3>
+                    </div>
+
+                    <div class="faq-item" data-category="farm">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                Where is Chipunga Farm located?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Chipunga Farm is located in Nkhata Bay District, Chikwina area under Traditional Authority Nyaluanga. It is 22 km northeast of Mzuzu City on the old Mzuzu - Nkhata Bay Road in Northern Malawi.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="farm">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                How large is Chipunga Farm?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                The farm has a total land area of 282 hectares (approximately 696.837 acres). Of this, 40.81 hectares are planted with coffee, 31.93 hectares with macadamia, and the remaining land is used for horticulture, tree plantation, and infrastructure development.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="farm">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                Who owns Chipunga Farms Limited?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Chipunga Farms Limited is a private limited liability company owned by the Diocese of Karonga. The company was acquired by the Diocese on 4th January 2018 with a loan from Missio USA.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="farm">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                How can I visit the farm?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                You can schedule a farm visit by contacting us through our contact page or calling +265 991 239 684. We welcome visitors who want to tour our coffee plantations, macadamia orchards, and beekeeping operations.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Category -->
+                    <div class="faq-category mb-4 mt-5" data-category="products">
+                        <h3 class="section-title">Products</h3>
+                    </div>
+
+                    <div class="faq-item" data-category="products">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                What products does Chipunga Farm produce?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Chipunga Farm produces high-quality Arabica coffee, premium macadamia nuts, and pure natural honey. Our coffee is processed into green beans, and our macadamia nuts are available in various grades for export markets.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="products">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                Where can I buy Chipunga Farm products?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Our products are available for wholesale and export. For pricing and availability, please contact us directly through our contact page or email chipungafarmsltd@gmail.com.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="products">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                Do you export internationally?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Yes. Our macadamia nuts are exported to international markets, particularly through partners in South Africa. We are also exploring export markets for our premium Arabica coffee. Approximately 95% of our macadamia production is exported.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outgrowers Category -->
+                    <div class="faq-category mb-4 mt-5" data-category="outgrowers">
+                        <h3 class="section-title">Outgrowers Scheme</h3>
+                    </div>
+
+                    <div class="faq-item" data-category="outgrowers">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                What is the Outgrowers Scheme?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                The Outgrowers Scheme is a program that supports 500+ small-scale farmers around Chipunga Farm. It provides training, quality seedlings, extension services, and access to processing and marketing facilities to help farmers improve their yields and income.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="outgrowers">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                How can I become an outgrower?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Interested farmers can contact our Outgrowers Coordinator, Kelvin Chidzuwa, through our contact page. You will need land suitable for coffee, macadamia, or beekeeping. Our team will assess your farm and provide training and support.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="outgrowers">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                What support do outgrowers receive?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Outgrowers receive training on best practices, access to improved and clean seedlings, extension services, and processing and marketing support. The farm guarantees a market for quality produce at competitive prices.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Careers Category -->
+                    <div class="faq-category mb-4 mt-5" data-category="careers">
+                        <h3 class="section-title">Careers</h3>
+                    </div>
+
+                    <div class="faq-item" data-category="careers">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                How can I apply for a job at Chipunga Farm?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                You can apply by sending your CV and cover letter to chipungafarmsltd@gmail.com. Current openings are listed on our Careers page. The recruitment process includes application review, interviews, practical testing, and reference checks.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="careers">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                What are the working hours?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Standard working hours are 7:30am to 5:00pm, Monday to Friday, including a 1.5-hour lunch break. This totals 8 hours per day and 40 hours per week. Security guards work a maximum of 48 hours per week.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="careers">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                What leave benefits are offered?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Employees receive 21 days annual leave, 90 days fully paid maternity leave (once every 3 years), 5 days paternity leave, 2 days compassionate leave per occasion, and study leave for eligible employees. Sick leave and unpaid leave are also available.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="careers">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                Is there a probation period?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Yes. New employees serve a 6-month probation period. Employees who have previously worked as interns or volunteers have a 3-month probation period. Permanent employment is confirmed after successful completion of probation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Investors Category -->
+                    <div class="faq-category mb-4 mt-5" data-category="investors">
+                        <h3 class="section-title">Investors</h3>
+                    </div>
+
+                    <div class="faq-item" data-category="investors">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                How can I invest in Chipunga Farm?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Chipunga Farm is seeking impact investors to support our expansion. The project requires approximately US$0.8 million in investment. You can request a detailed prospectus and financial model by contacting us through our Investor Relations page.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="investors">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                What is the expected return on investment?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                First positive annual cash flow is expected in 2023. Coffee full capacity is expected in 2025, and macadamia full capacity in 2024. Macadamia gross margin reaches 89% by year 9, and coffee gross margin reaches 61% by year 9. Please request our detailed financial plan for complete projections.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="investors">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                What type of investment is this?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                This is an impact investment opportunity. The project creates 60 permanent and 100 temporary jobs, supports 500+ outgrower farmers, and implements sustainable water management practices. The investment suits patient capital from impact and development financing providers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="investors">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                Is a detailed financial plan available?
+                                <span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                Yes. A detailed financial plan including income statements, cash flow projections, balance sheets, and sensitivity analysis is available upon request. Please contact us through the Investor Relations page.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ Grid End -->
+
+    <!-- Still Have Questions Start -->
+    <div class="container-fluid bg-primary py-5 mt-4">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-8 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="text-white mb-3">Still Have Questions?</h2>
+                    <p class="text-white mb-0">We're here to help. Contact our team directly and we'll get back to you as soon as possible.</p>
+                </div>
+                <div class="col-md-4 text-md-end wow fadeInUp" data-wow-delay="0.3s">
+                    <a class="btn btn-light btn-lg rounded-pill py-3 px-5" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Still Have Questions End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fw-bold text-primary mb-4">CHIPUNGA<span class="text-secondary">FARMS</span>LTD</h3>
+                    <p>Chipunga Farms are located in Nkhata Bay, in the cool highlands of Viphya Plateau in Northern Malawi.</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p>PO Box 345, Mzuzu, Malawi</p>
+                    <p>+265 991 239 684 / +265 883 182 877</p>
+                    <p>chipungafarmsltd@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="product.html">Our Products</a>
+                    <a class="btn btn-link" href="Out_Growers_Scheme.html">Outgrowers Scheme</a>
+                    <a class="btn btn-link" href="gallery.html">Gallery</a>
+                    <a class="btn btn-link" href="investors.html">Investor Relations</a>
+                    <a class="btn btn-link" href="careers.html">Careers</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Subscribe to get updates about our harvest and products.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; Chipunga Farms Limited, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By Himawari Holdings
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+        $(document).ready(function() {
+            // Accordion functionality
+            $('.faq-question').click(function() {
+                $(this).toggleClass('active');
+                $(this).next('.faq-answer').slideToggle(300);
+            });
+
+            // Category filter functionality
+            $('.category-btn').click(function() {
+                var filterValue = $(this).data('category');
+                
+                $('.category-btn').removeClass('active');
+                $(this).addClass('active');
+                
+                if (filterValue === 'all') {
+                    $('.faq-item').show();
+                    $('.faq-category').show();
+                } else {
+                    $('.faq-item').each(function() {
+                        if ($(this).data('category') === filterValue) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                    $('.faq-category').each(function() {
+                        if ($(this).data('category') === filterValue) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

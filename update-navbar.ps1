@@ -12,7 +12,7 @@ $navbarStart = @'
         </div>
         <div class="col-lg-6 px-5 text-end">
             <small>Follow us:</small>
-            <a class="text-body ms-3" href="https://www.facebook.com/people/Chipunga-Farms-Limited/61559891468609/?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+            <a class="text-body ms-3" href="https://www.facebook.com/people/Chipunga-Farms-Limited/61559891468609/"><i class="fab fa-facebook-f"></i></a>
             <a class="text-body ms-3" href="#"><i class="fab fa-twitter"></i></a>
             <a class="text-body ms-3" href="#"><i class="fab fa-linkedin-in"></i></a>
             <a class="text-body ms-3" href="#"><i class="fab fa-instagram"></i></a>
@@ -66,6 +66,10 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -84,6 +88,10 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -102,6 +110,10 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -120,6 +132,10 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -138,6 +154,10 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -156,6 +176,10 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -174,6 +198,10 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item active">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -192,6 +220,10 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item active">Testimonial</a>
                         <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -210,6 +242,10 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -228,6 +264,10 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
                         <a href="404.html" class="dropdown-item active">404 Page</a>
                     </div>
                 </div>
@@ -246,6 +286,98 @@ $navLinks = @{
                         <a href="feature.html" class="dropdown-item">Our Features</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="policies.html" class="dropdown-item active">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+'@
+    "investors.html" = @'
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="feature.html" class="dropdown-item">Our Features</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item active">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+'@
+    "careers.html" = @'
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="feature.html" class="dropdown-item">Our Features</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item active">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+'@
+    "faq.html" = @'
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="feature.html" class="dropdown-item">Our Features</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item active">FAQ</a>
+                        <a href="partners.html" class="dropdown-item">Partners</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+'@
+    "partners.html" = @'
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="Out_Growers_Scheme.html" class="nav-item nav-link">Outgrowers</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="feature.html" class="dropdown-item">Our Features</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                        <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                        <a href="careers.html" class="dropdown-item">Careers</a>
+                        <a href="faq.html" class="dropdown-item">FAQ</a>
+                        <a href="partners.html" class="dropdown-item active">Partners</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -283,4 +415,4 @@ foreach ($file in $htmlFiles) {
     }
 }
 
-Write-Host "`nAll done!" -ForegroundColor Green
+Write-Host "`nAll done! All pages now have the updated navigation with Investors, Careers, FAQ, and Partners links." -ForegroundColor Green

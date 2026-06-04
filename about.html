@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Chipunga Farm - About Us</title>
+    <title>Chipunga Farms Limited - About Us</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -31,337 +31,59 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .team-item {
-            transition: all 0.3s ease;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        .team-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(139, 107, 77, 0.15);
-        }
-        .team-img {
-            position: relative;
-            overflow: hidden;
-            height: 300px;
-        }
-        .team-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        .team-item:hover .team-img img {
-            transform: scale(1.1);
-        }
-        .team-social {
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(139, 107, 77, 0.9), transparent);
-            padding: 20px;
-            transition: bottom 0.3s;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .team-item:hover .team-social {
-            bottom: 0;
-        }
-        .team-social a {
-            width: 35px;
-            height: 35px;
+        .info-card {
             background: white;
-            color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        .team-social a:hover {
-            background: var(--primary);
-            color: white;
-            transform: rotate(360deg);
-        }
-        .team-position-badge {
-            display: inline-block;
-            padding: 5px 15px;
-            background: rgba(139, 107, 77, 0.1);
-            color: var(--primary);
-            border-radius: 30px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        
-        /* Professional Team Card Styles */
-        .team-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            height: 100%;
-        }
-        
-        .team-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(139, 107, 77, 0.15);
-        }
-        
-        .team-card-inner {
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .team-image-wrapper {
-            position: relative;
-            height: 320px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .team-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-        
-        .team-card:hover .team-image {
-            transform: scale(1.05);
-        }
-        
-        .team-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #8B6B4D 0%, #6B4E3B 100%);
-        }
-        
-        .team-placeholder i {
-            font-size: 100px;
-            color: rgba(255,255,255,0.3);
-        }
-        
-        .team-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            padding: 30px 20px 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .team-card:hover .team-overlay {
-            opacity: 1;
-        }
-        
-        .team-social-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-        }
-        
-        .social-link {
-            width: 38px;
-            height: 38px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #8B6B4D;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            transform: translateY(20px);
-            opacity: 0;
-        }
-        
-        .team-card:hover .social-link {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        .social-link:hover {
-            background: #8B6B4D;
-            color: white;
-            transform: rotate(360deg);
-        }
-        
-        .social-link:nth-child(1) { transition-delay: 0.05s; }
-        .social-link:nth-child(2) { transition-delay: 0.1s; }
-        .social-link:nth-child(3) { transition-delay: 0.15s; }
-        
-        .team-info {
-            padding: 24px;
-            text-align: center;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .team-badge {
-            display: inline-block;
-            padding: 6px 16px;
-            background: linear-gradient(135deg, #8B6B4D 0%, #6B4E3B 100%);
-            color: white;
-            border-radius: 30px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            align-self: center;
-        }
-        
-        .team-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #2C1810;
-        }
-        
-        .team-bio {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            flex: 1;
-        }
-        
-        .team-divider {
-            width: 50px;
-            height: 2px;
-            background: linear-gradient(90deg, #8B6B4D, transparent);
-            margin: 15px auto;
-        }
-        
-        .team-stats {
-            display: flex;
-            justify-content: space-around;
-            gap: 15px;
-            margin-top: 10px;
-        }
-        
-        .team-stat {
-            text-align: center;
-            flex: 1;
-        }
-        
-        .stat-value {
-            display: block;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #8B6B4D;
-        }
-        
-        .stat-label {
-            display: block;
-            font-size: 0.7rem;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        /* New styles for the investment section */
-        .investment-card {
-            background: white;
-            border-radius: 15px;
+            border-radius: 10px;
             padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-            border: 1px solid rgba(139, 107, 77, 0.1);
-        }
-        
-        .investment-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(139, 107, 77, 0.15);
-            border-color: var(--primary);
-        }
-        
-        .investment-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(139, 107, 77, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             margin-bottom: 20px;
+            border-left: 4px solid #8B6B4D;
         }
-        
-        .investment-icon i {
-            font-size: 30px;
-            color: var(--primary);
+        .stats-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
         }
-        
-        .fact-figure {
-            font-size: 36px;
+        .stat-number {
+            font-size: 32px;
             font-weight: 700;
-            color: var(--primary);
-            line-height: 1.2;
+            color: #8B6B4D;
             margin-bottom: 5px;
         }
-        
-        .fact-label {
-            color: #6c757d;
+        .stat-label {
             font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: #6c757d;
         }
-        
-        .sustainability-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            border-radius: 20px;
-            padding: 40px;
-            margin: 40px 0;
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #8B6B4D;
+            display: inline-block;
         }
-        
-        .impact-list li {
+        .team-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 107, 77, 0.15);
+        }
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
             margin-bottom: 15px;
-            padding-left: 30px;
-            position: relative;
-            list-style: none;
         }
-        
-        .impact-list li:before {
-            content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        
-        .water-users-card {
-            background: var(--primary);
-            color: white;
-            border-radius: 15px;
-            padding: 30px;
-        }
-        
-        .water-users-card i {
-            font-size: 48px;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-        
         :root {
             --primary: #8B6B4D;
-            --secondary: #6B4E3B;
         }
     </style>
 </head>
@@ -382,7 +104,7 @@
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small>Follow us:</small>
-                <a class="text-body ms-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-body ms-3" href="https://www.facebook.com/people/Chipunga-Farms-Limited/61559891468609/"><i class="fab fa-facebook-f"></i></a>
                 <a class="text-body ms-3" href="#"><i class="fab fa-twitter"></i></a>
                 <a class="text-body ms-3" href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a class="text-body ms-3" href="#"><i class="fab fa-instagram"></i></a>
@@ -412,6 +134,10 @@
                             <a href="feature.html" class="dropdown-item">Our Features</a>
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             <a href="policies.html" class="dropdown-item">Policies & Resources</a>
+                            <a href="investors.html" class="dropdown-item">Investor Relations</a>
+                            <a href="careers.html" class="dropdown-item">Careers</a>
+                            <a href="faq.html" class="dropdown-item">FAQ</a>
+                            <a href="partners.html" class="dropdown-item">Partners</a>
                             <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
@@ -448,496 +174,234 @@
     </div>
     <!-- Page Header End -->
 
-    <!-- Investing in Sustainable Agribusiness Start -->
+    <!-- Company Overview Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="img/about.jpeg" alt="Chipunga Farm Aerial View">
+                        <img class="img-fluid w-100" src="img/about.jpeg" alt="Chipunga Farm">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-5 mb-4">Investing in a Sustainable Agribusiness</h1>
-                    <p class="mb-4">Chipunga is a <strong>287 ha greenfield coffee and macadamia plantation</strong> located in Nkhatabay District in Northern Malawi. Chipunga Farm Ltd. – owner of the plantation – was acquired by the Diocese of Karonga with a loan from Missio USA and is managed and developed through trustful experts well known by the Diocese.</p>
-                    <p class="mb-4">The business strategy of Chipunga Farm Ltd. is the production of high quality Arabica coffee berries and macadamia nuts generating sustainable income for the Diocese. Of the 287 ha, <strong>150 ha will be planted with coffee</strong> and <strong>100 ha will be planted with macadamia</strong> while the remaining land will be used for horticulture, tree plantation and infrastructural development like roads and houses.</p>
-                    <div class="row g-4 mt-3">
-                        <div class="col-6">
-                            <div class="fact-figure">150 ha</div>
-                            <div class="fact-label">Coffee Plantation</div>
-                        </div>
-                        <div class="col-6">
-                            <div class="fact-figure">100 ha</div>
-                            <div class="fact-label">Macadamia Plantation</div>
-                        </div>
+                    <h1 class="display-5 mb-4">Chipunga Farms Limited</h1>
+                    <p class="mb-4">Chipunga Farms Limited is a private limited liability company owned by the Diocese of Karonga. The company was acquired by the Diocese on 4th January 2018 with a loan from Missio USA. The farm is managed and developed by trusted experts well known to the Diocese.</p>
+                    
+                    <div class="info-card">
+                        <h5 class="mb-3">Company Registration</h5>
+                        <p class="mb-1"><strong>Company Name:</strong> Chipunga Farms Limited</p>
+                        <p class="mb-1"><strong>Authorized Share Capital:</strong> K610,000,000.00</p>
+                        <p class="mb-1"><strong>Registration Date:</strong> 17th February 2023</p>
+                        <p class="mb-0"><strong>Ownership:</strong> The Registered Trustees of the Diocese of Karonga</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Investing in Sustainable Agribusiness End -->
+    <!-- Company Overview End -->
 
-    <!-- Processing & Timeline Start -->
+    <!-- Farm Information Start -->
     <div class="container-fluid bg-light py-5">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="investment-card">
-                        <div class="investment-icon">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                        <h4 class="mb-3">Processing Strategy</h4>
-                        <p class="mb-4">Currently, all harvested coffee berries and macadamia nuts are processed at Chipunga Farm, ensuring full control over quality, traceability, and operational efficiency from harvest to finished product. Coffee berries are processed into washed green beans on-site through the farm's existing processing systems, while macadamia nuts are also processed directly at Chipunga Farm. This integrated approach allows the farm to maintain high product standards, reduce reliance on external processors, and maximize operational efficiency.</p>
-                        <p class="mb-0">As coffee production continues to expand toward full capacity, Chipunga Farm is scaling and strengthening its on-site processing operations to efficiently manage increased volumes while maintaining quality. This self-sustaining processing model reinforces the farm's commitment to value addition, cost efficiency, and long-term agricultural sustainability.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="investment-card">
-                        <div class="investment-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4 class="mb-3">Strategic Timeline</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>2027:</strong> First positive annual Cash Flow expected</li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>2028:</strong> Macadamia capacity will be reached</li>
-                            <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i> <strong>2029:</strong> Coffee capacity will be reached & return anticipated on cumulative basis</li>
-                        </ul>
-                        <p class="mb-0 mt-3">Chipunga sees high demand for high quality Arabica coffee and macadamia. Therefore our vision is to be a coffee and macadamia plantation that meets world class standards and sustainable agricultural practices.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Processing & Timeline End -->
-
-    <!-- Social Impact Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h2 class="display-6 mb-4">Community & Social Impact</h2>
-                    <p class="mb-4">Through the acquisition of Chipunga Farm the Diocese intends to create sustainable income and provides permanent and temporary work for <strong>60 people and 100 people respectively</strong> working on the farm. In the future the faithful of the Diocese will benefit from the additional financial return.</p>
-                    <p class="mb-4">The laborers working on the farm will have more funds available to improve their quality of life, e.g. purchasing solar panels to have electricity and improve housing for the family.</p>
-                    <p class="mb-4">Besides this more than <strong>500 small scale farmers</strong> from surrounding villages will benefit from services such as agricultural advisory, processing and marketing services. We are very positive that the acquisition and the development of Chipunga Farm will meet the criteria of impact investment.</p>
-                    <div class="row g-4 mt-3">
-                        <div class="col-4 text-center">
-                            <div class="fact-figure">60</div>
-                            <div class="fact-label">Permanent Jobs</div>
-                        </div>
-                        <div class="col-4 text-center">
-                            <div class="fact-figure">100</div>
-                            <div class="fact-label">Temporary Jobs</div>
-                        </div>
-                        <div class="col-4 text-center">
-                            <div class="fact-figure">500+</div>
-                            <div class="fact-label">OGS Beneficiaries</div>
-                        </div>
+                    <h2 class="section-title mb-4">Farm Information</h2>
+                    <div class="info-card">
+                        <p><strong>Location:</strong> Nkhata Bay District, Chikwina area under Traditional Authority Nyaluanga</p>
+                        <p><strong>Distance from Mzuzu:</strong> 22 km northeast on the old Mzuzu - Nkhata Bay Road</p>
+                        <p><strong>Total Land Area:</strong> 282 hectares (approximately 696.837 acres)</p>
+                        <p><strong>Land Title:</strong> Leasehold held under Title Deed No. 68553 for a period of 99 years from 1st October 1991</p>
+                        <p class="mb-0"><strong>Business Strategy:</strong> Production of high quality Arabica coffee berries and macadamia nuts generating sustainable income for the Diocese</p>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <img class="img-fluid rounded" src="img/community.jpg" alt="Community Impact">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Social Impact End -->
-
-    <!-- Sustainability From The Ground Up Start -->
-    <div class="container-fluid sustainability-section wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <h2 class="display-6 mb-4">Sustainability From The Ground Up</h2>
-                    <p class="mb-4">Developing a greenfield plantation like Chipunga requires deep understanding of the issues on the ground e.g. risks that may negatively affect the investment and active stakeholder engagement. As part of a risk management strategy especially drought, Chipunga is committed to implement an <strong>integrated water resources management (IWRM) plan</strong> for the project.</p>
-                    <p class="mb-4">Both the coffee and macadamia production, by means of drip irrigation, and the coffee washing station will require significant quantities of water which has to come from the <strong>Chipunga River</strong> which runs through the Farm. This calls for a thorough assessment of the water availability, quantities and quality and use with regards to, not only the project, but also the communities and ecosystem needs.</p>
-                    <p class="mb-4">As part of the IWRM plan, Chipunga intends to build a dam on Chipunga River in order to staunch the water flow during the rainy season for use during the dry season.</p>
-                </div>
-                <div class="col-lg-5">
-                    <div class="water-users-card">
-                        <i class="fas fa-hand-holding-water"></i>
-                        <h4 class="text-white mb-3">Water Users Association</h4>
-                        <p class="text-white mb-4">Chipunga has facilitated the creation of a <strong>Water Users Association</strong> where it cooperates with local communities, other users and the government to ensure responsible water use and sustainable management of the catchment area for now and the future.</p>
-                        <p class="text-white mb-0">The knowledge and experience gained through this project will be transferred to <strong>Kajikhomele Farm</strong> in Chiwera, Rumphi District, where another independent and registered company of the Diocese intends to open a 100 ha farm for coffee, macadamia and beekeeping.</p>
+                    <h2 class="section-title mb-4">Current Plantation Status</h2>
+                    <div class="info-card">
+                        <p><strong>Coffee Plantation:</strong> 40.81 hectares (approximately 170,042 plants)</p>
+                        <p><strong>Macadamia Plantation:</strong> 31.93 hectares (approximately 7,249 trees)</p>
+                        <p><strong>New Coffee Nursery:</strong> 34,053 seedlings ready for transplanting</p>
+                        <p class="mb-0"><strong>Target Expansion:</strong> 130 hectares coffee, 70.93 hectares macadamia, remaining land for horticulture, tree plantation and infrastructure</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Sustainability From The Ground Up End -->
+    <!-- Farm Information End -->
 
-    <!-- Outgrower Scheme Programme Start -->
+    <!-- Key Statistics Start -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid rounded" src="img/outgrowers.jpeg" alt="Outgrower Scheme">
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h2 class="display-6 mb-4">Outgrower Scheme Programme</h2>
-                    <p class="mb-4">Chipunga has established an <strong>Out Grower Scheme (OGS) programme</strong> directly targeting <strong>500 small scale farmers</strong> around the Farm as part of its social responsibility. The Out Grower Scheme programme will train and support the small scale farmers to improve yields of their own coffee and macadamia.</p>
-                    <p class="mb-4">In addition to access to; extension services, improved and clean seedlings, small scale farmers targeted under the Out Grower Scheme will also benefit from processing and marketing activities undertaken by the Farm.</p>
-                    <a href="Out_Growers_Scheme.html" class="btn btn-primary rounded-pill py-3 px-5 mt-2">Learn More About OGS</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Outgrower Scheme Programme End -->
-
-    <!-- Facts and Figures Start -->
-    <div class="container-fluid bg-primary bg-icon py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h2 class="display-6 text-white mb-3">Facts and Figures</h2>
-                <p class="text-white mb-0">A detailed financial plan is available upon request.</p>
+                <h2 class="section-title">Key Statistics</h2>
             </div>
-            <div class="row g-4 text-center">
+            <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <i class="fas fa-building fa-3x text-primary mb-3"></i>
-                        <h5 class="mb-1">Name of Company</h5>
-                        <p class="mb-0 fw-bold">Chipunga Farm Limited</p>
+                    <div class="stats-box">
+                        <div class="stat-number">282</div>
+                        <div class="stat-label">Total Hectares</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <i class="fas fa-seedling fa-3x text-primary mb-3"></i>
-                        <h5 class="mb-1">Sector</h5>
-                        <p class="mb-0 fw-bold">Agribusiness</p>
+                    <div class="stats-box">
+                        <div class="stat-number">40.81</div>
+                        <div class="stat-label">Coffee Hectares</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <i class="fas fa-map-marked-alt fa-3x text-primary mb-3"></i>
-                        <h5 class="mb-1">Size of the Farm</h5>
-                        <p class="mb-0 fw-bold">287 ha</p>
+                    <div class="stats-box">
+                        <div class="stat-number">31.93</div>
+                        <div class="stat-label">Macadamia Hectares</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <i class="fas fa-dollar-sign fa-3x text-primary mb-3"></i>
-                        <h5 class="mb-1">Required Investment</h5>
-                        <p class="mb-0 fw-bold">$1.5 mln</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <i class="fas fa-hand-holding-heart fa-3x text-primary mb-3"></i>
-                        <h5 class="mb-1">Acquired Investment</h5>
-                        <p class="mb-0 fw-bold">$0.5 mln</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <i class="fas fa-chart-pie fa-3x text-primary mb-3"></i>
-                        <h5 class="mb-1">Type of Investment</h5>
-                        <p class="mb-0 fw-bold">Impact Investment</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
-                        <h5 class="mb-1">Max Coffee Capacity</h5>
-                        <p class="mb-0 fw-bold">2025</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
-                        <h5 class="mb-1">Max Macadamia Capacity</h5>
-                        <p class="mb-0 fw-bold">2024</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <i class="fas fa-money-bill-wave fa-3x text-primary mb-3"></i>
-                        <h5 class="mb-1">First Positive Cash Flows</h5>
-                        <p class="mb-0 fw-bold">2023</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.0s">
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <i class="fas fa-users fa-3x text-primary mb-3"></i>
-                        <h5 class="mb-1">OGS Beneficiaries</h5>
-                        <p class="mb-0 fw-bold">500</p>
+                    <div class="stats-box">
+                        <div class="stat-number">K610M</div>
+                        <div class="stat-label">Authorized Capital</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Facts and Figures End -->
+    <!-- Key Statistics End -->
 
-    <!-- Envisaged Impact Start -->
+    <!-- Business Strategy Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="section-title mb-4">Business Strategy</h2>
+                    <div class="info-card">
+                        <p class="mb-3">Chipunga Farm is a premium coffee and macadamia farm in Nkhata Bay, Northern Malawi. Set in high-altitude terrain with fertile soils, cool temperatures, and reliable rainfall, we practice sustainable farming to produce exceptional crops.</p>
+                        <p class="mb-3">Our vision is to be a coffee and macadamia plantation that meets world class standards and sustainable agricultural practices. Chipunga strives to balance environmental and social factors as it works towards building a sustainable agribusiness.</p>
+                        <p class="mb-0"><strong>Growth Targets:</strong> 130 hectares coffee, 70.93 hectares macadamia. Coffee full capacity expected 2025, Macadamia full capacity expected 2024.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <h2 class="section-title mb-4">Social Impact</h2>
+                    <div class="info-card">
+                        <p><strong>Permanent Employment:</strong> 60 people</p>
+                        <p><strong>Temporary Employment:</strong> 100 people</p>
+                        <p><strong>Outgrower Beneficiaries:</strong> 500+ small scale farmers</p>
+                        <p class="mb-0"><strong>Services Provided:</strong> Agricultural advisory, processing and marketing services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Business Strategy End -->
+
+    <!-- Processing & Marketing Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                    <h2 class="display-6 mb-4 text-center">Envisaged Impact of The Farm</h2>
-                </div>
-            </div>
-            <div class="row g-4 mt-2">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="investment-card">
-                        <i class="fa fa-briefcase fa-2x text-primary mb-3"></i>
-                        <h5>Job Generation</h5>
-                        <p class="mb-0">Job generation in an area where employment opportunities are very scarce.</p>
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="section-title mb-4">Processing Strategy</h2>
+                    <div class="info-card">
+                        <h5 class="mb-3">Short Term Plan</h5>
+                        <p>Coffee berries processed into washed green beans at Mzuzu Coffee Authority factory (22km away). Macadamia nuts processed by Tropha Farm just outside Mzuzu City.</p>
+                        <h5 class="mb-3 mt-4">Long Term Plan</h5>
+                        <p class="mb-0">Once coffee production reaches its full capacity, coffee berries will be washed at the Farm itself. On-farm processing facilities are planned for future expansion.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="investment-card">
-                        <i class="fa fa-shield-alt fa-2x text-primary mb-3"></i>
-                        <h5>Health & Safety</h5>
-                        <p class="mb-0">Promote Health and Safety Policy and Procedures on the Farm and surrounding communities.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="investment-card">
-                        <i class="fa fa-globe fa-2x text-primary mb-3"></i>
-                        <h5>Industry Growth</h5>
-                        <p class="mb-0">Stimulate the overall Malawi Coffee and Macadamia industries by promoting Malawi coffee and macadamia to overseas markets.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="investment-card">
-                        <i class="fa fa-wallet fa-2x text-primary mb-3"></i>
-                        <h5>Increased Income</h5>
-                        <p class="mb-0">Increase in disposable income of the local population of Chipunga.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="investment-card">
-                        <i class="fa fa-chalkboard-teacher fa-2x text-primary mb-3"></i>
-                        <h5>Farmer Training</h5>
-                        <p class="mb-0">Training surrounding local farmers to improve yields of their own coffee and macadamia through the Out Growers Programme.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="investment-card">
-                        <i class="fa fa-road fa-2x text-primary mb-3"></i>
-                        <h5>Infrastructure Development</h5>
-                        <p class="mb-0">Development of roads and energy services in the Chipunga area as well as an Integrated Water Resources Management Plan for the area.</p>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h2 class="section-title mb-4">Market Strategy</h2>
+                    <div class="info-card">
+                        <p><strong>Coffee:</strong> High demand for high quality Arabica coffee. Existing contract with Joppam General Suppliers for 15MT of green coffee beans at USD 5.0 per kilogram. Long term premium markets through Rainforest Alliance Certification.</p>
+                        <p class="mb-0"><strong>Macadamia:</strong> Processing through established partners including Macridge Processing Solutions in South Africa. Discussions ongoing with Green Farms Nut Company for long-term contracts.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Envisaged Impact End -->
+    <!-- Processing & Marketing End -->
 
-    <!-- Meet Our Team Start - Professional Redesign -->
-    <div class="container-xxl py-5 bg-light">
+    <!-- Sustainability Start -->
+    <div class="container-fluid bg-light py-5">
         <div class="container">
-            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="section-title mb-4">Sustainability Commitment</h2>
+                    <div class="info-card">
+                        <p class="mb-3">Chipunga Farm is committed to implementing an Integrated Water Resources Management (IWRM) plan for the project. Both coffee and macadamia production, by means of drip irrigation, and the coffee washing station will require significant quantities of water from the Chipunga River which runs through the Farm.</p>
+                        <p class="mb-3">As part of the IWRM plan, Chipunga intends to build a dam on Chipunga River to staunch water flow during the rainy season for use during the dry season.</p>
+                        <p class="mb-3">Chipunga has facilitated the creation of a Water Users Association where it cooperates with local communities, other users and the government to ensure responsible water use and sustainable management of the catchment area.</p>
+                        <p class="mb-0"><strong>Environmental Protection:</strong> The farm has approximately 56 hectares of natural woodlands which remain untouched to protect water sources and ensure environmental conservation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sustainability End -->
+
+    <!-- Mission Vision Values Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="info-card h-100">
+                        <h4 class="mb-3">Our Mission</h4>
+                        <p class="mb-0">To produce the highest quality organic products while empowering local farming communities through sustainable practices and fair partnerships.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="info-card h-100">
+                        <h4 class="mb-3">Our Vision</h4>
+                        <p class="mb-0">To become Malawi's leading exporter of premium coffee, macadamia nuts, and honey, recognized globally for exceptional quality and sustainability.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="info-card h-100">
+                        <h4 class="mb-3">Our Values</h4>
+                        <p class="mb-0">Integrity, sustainability, community empowerment, and excellence in everything we do.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mission Vision Values End -->
+
+    <!-- Meet Our Team Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h1 class="display-5 mb-3">Meet Our Leadership Team</h1>
-                <p class="lead">The dedicated professionals driving Chipunga Farm's vision for sustainable agriculture and excellence</p>
+                <p>The dedicated professionals behind Chipunga Farm's success</p>
             </div>
             <div class="row g-4">
-                <!-- Team Member 1 - Joseph Mkinga, General Manager -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- Joseph Mkinga - General Manager -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-card">
-                        <div class="team-card-inner">
-                            <div class="team-image-wrapper">
-                                <img src="img/joseph-mkinga.jpg.jpeg" alt="Joseph Mkinga - General Manager" class="team-image" onerror="this.parentElement.innerHTML='<div class=&#39;team-placeholder&#39;><i class=&#39;fas fa-user-circle&#39;></i></div>' + this.parentElement.innerHTML">
-                                <div class="team-overlay">
-                                    <div class="team-social-links">
-                                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                                        <a href="mailto:joseph@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-info">
-                                <div class="team-badge">General Manager</div>
-                                <h3 class="team-name">Joseph Mkinga</h3>
-                                <p class="team-bio">Leading Chipunga Farm with over 20 years of experience in agricultural management, export operations, and strategic farm development across Malawi.</p>
-                                <div class="team-divider"></div>
-                                <div class="team-stats">
-                                    <div class="team-stat">
-                                        <span class="stat-value">20+</span>
-                                        <span class="stat-label">Years Exp</span>
-                                    </div>
-                                    <div class="team-stat">
-                                        <span class="stat-value">287</span>
-                                        <span class="stat-label">Hectares</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <img src="img/about.jpeg" alt="Joseph Mkinga" class="team-img">
+                        <h5 class="mb-1">Joseph Mkinga</h5>
+                        <p class="text-primary mb-2">General Manager</p>
+                        <p class="mb-0 small">Leading Chipunga Farm with over 20 years of experience in agricultural management and export operations.</p>
                     </div>
                 </div>
-                
-                <!-- Team Member 2 - Junior Mwiba, Agribusiness Accountant -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <!-- Junior Mwiba - Agribusiness Accountant -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="team-card">
-                        <div class="team-card-inner">
-                            <div class="team-image-wrapper">
-                                <div class="team-placeholder">
-                                    <i class="fas fa-user-circle"></i>
-                                </div>
-                                <div class="team-overlay">
-                                    <div class="team-social-links">
-                                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                                        <a href="mailto:junior@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-info">
-                                <div class="team-badge">Agribusiness Accountant</div>
-                                <h3 class="team-name">Junior Mwiba</h3>
-                                <p class="team-bio">Expert in agricultural finance, financial modeling, and sustainable growth strategies. Ensures financial integrity across all farm operations.</p>
-                                <div class="team-divider"></div>
-                                <div class="team-stats">
-                                    <div class="team-stat">
-                                        <span class="stat-value">$1.5M</span>
-                                        <span class="stat-label">Budget</span>
-                                    </div>
-                                    <div class="team-stat">
-                                        <span class="stat-value">10+</span>
-                                        <span class="stat-label">Years Exp</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <img src="img/" alt="Junior Mwiba" class="team-img">
+                        <h5 class="mb-1">Junior Mwiba</h5>
+                        <p class="text-primary mb-2">Agribusiness Accountant</p>
+                        <p class="mb-0 small">Expert in agricultural finance, ensuring sustainable growth and financial integrity across all operations.</p>
                     </div>
                 </div>
-                
-                <!-- Team Member 3 - Adams Mhone, Farm Manager -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <!-- Adams Mhone - Farm Manager -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-card">
-                        <div class="team-card-inner">
-                            <div class="team-image-wrapper">
-                                <img src="img/adams-mhone.jpg.jpeg" alt="Adams Mhone - Farm Manager" class="team-image" onerror="this.parentElement.innerHTML='<div class=&#39;team-placeholder&#39;><i class=&#39;fas fa-user-circle&#39;></i></div>' + this.parentElement.innerHTML">
-                                <div class="team-overlay">
-                                    <div class="team-social-links">
-                                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                                        <a href="mailto:adams@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-info">
-                                <div class="team-badge">Farm Manager</div>
-                                <h3 class="team-name">Adams Mhone</h3>
-                                <p class="team-bio">Oversees all farming operations, specializing in coffee and macadamia cultivation with 15+ years experience in plantation management.</p>
-                                <div class="team-divider"></div>
-                                <div class="team-stats">
-                                    <div class="team-stat">
-                                        <span class="stat-value">250</span>
-                                        <span class="stat-label">Acres</span>
-                                    </div>
-                                    <div class="team-stat">
-                                        <span class="stat-value">15+</span>
-                                        <span class="stat-label">Years Exp</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <img src="img/adams-mhone.jpg.jpeg" alt="Adams Mhone" class="team-img">
+                        <h5 class="mb-1">Adams Mhone</h5>
+                        <p class="text-primary mb-2">Farm Manager</p>
+                        <p class="mb-0 small">Oversees all farming operations, specializing in coffee and macadamia cultivation with 15+ years experience.</p>
                     </div>
                 </div>
-                
-               
-            <!-- Team Member 4 - Naomi Mughogho, Outgrowers Coordinator -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="team-card">
-                    <div class="team-card-inner">
-                        <div class="team-image-wrapper">
-                            <img src="img/grace.jpg" alt="Naomi Mughogho - Outgrowers Coordinator" class="team-image" onerror="this.parentElement.innerHTML='<div class=&#39;team-placeholder&#39;><i class=&#39;fas fa-user-circle&#39;></i></div>' + this.parentElement.innerHTML">
-                            <div class="team-overlay">
-                                <div class="team-social-links">
-                                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                                    <a href="mailto:naomi@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-info">
-                            <div class="team-badge">Outgrowers Coordinator</div>
-                            <h3 class="team-name">Naomi Mughogho</h3>
-                            <p class="team-bio">Manages relationships with over 500 outgrower farmers, providing training and support for quality coffee and macadamia production.</p>
-                            <div class="team-divider"></div>
-                            <div class="team-stats">
-                                <div class="team-stat">
-                                    <span class="stat-value">500+</span>
-                                    <span class="stat-label">Farmers</span>
-                                </div>
-                                <div class="team-stat">
-                                    <span class="stat-value">8</span>
-                                    <span class="stat-label">Villages</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                
-                <!-- Team Member 5 - Grace Msiska, Quality Supervisor -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <!-- Grace Msiska - Quality Supervisor -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="team-card">
-                        <div class="team-card-inner">
-                            <div class="team-image-wrapper">
-                                <div class="team-placeholder">
-                                    <i class="fas fa-user-circle"></i>
-                                </div>
-                                <div class="team-overlay">
-                                    <div class="team-social-links">
-                                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                                        <a href="mailto:grace@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-info">
-                                <div class="team-badge">Quality Supervisor</div>
-                                <h3 class="team-name">Grace Msiska</h3>
-                                <p class="team-bio">Ensures all products meet international quality standards through rigorous testing, quality control, and certification processes.</p>
-                                <div class="team-divider"></div>
-                                <div class="team-stats">
-                                    <div class="team-stat">
-                                        <span class="stat-value">100%</span>
-                                        <span class="stat-label">Quality Rate</span>
-                                    </div>
-                                    <div class="team-stat">
-                                        <span class="stat-value">12+</span>
-                                        <span class="stat-label">Years Exp</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Team Member 6 - Kelvin Chidzuwa, Operations Manager -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="team-card">
-                        <div class="team-card-inner">
-                            <div class="team-image-wrapper">
-                                <div class="team-placeholder">
-                                    <i class="fas fa-user-circle"></i>
-                                </div>
-                                <div class="team-overlay">
-                                    <div class="team-social-links">
-                                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                                        <a href="mailto:kelvin@chipungafarm.mw" class="social-link"><i class="fa fa-envelope"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-info">
-                                <div class="team-badge">Operations Manager</div>
-                                <h3 class="team-name">Kelvin Chidzuwa</h3>
-                                <p class="team-bio">Coordinates daily farm operations, logistics, and supply chain management to ensure efficient production and distribution.</p>
-                                <div class="team-divider"></div>
-                                <div class="team-stats">
-                                    <div class="team-stat">
-                                        <span class="stat-value">24/7</span>
-                                        <span class="stat-label">Operations</span>
-                                    </div>
-                                    <div class="team-stat">
-                                        <span class="stat-value">10+</span>
-                                        <span class="stat-label">Years Exp</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <img src="img/grace.jpg" alt="Grace Msiska" class="team-img">
+                        <h5 class="mb-1">Grace Msiska</h5>
+                        <p class="text-primary mb-2">Quality Supervisor</p>
+                        <p class="mb-0 small">Ensures all products meet international quality standards through rigorous testing and quality control.</p>
                     </div>
                 </div>
             </div>
@@ -946,7 +410,7 @@
     <!-- Meet Our Team End -->
 
     <!-- Firm Visit Start -->
-    <div class="container-fluid bg-primary bg-icon mt-5 py-6">
+    <div class="container-fluid bg-primary mt-5 py-6">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-md-7 wow fadeIn" data-wow-delay="0.1s">
@@ -966,20 +430,14 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h3 class="fw-bold text-primary mb-4">CHIPUNGA<span class="text-secondary">FARM</span>LTD</h3>
-                    <p>Premium coffee, macadamia nuts, and honey from the fertile lands of Mzuzu, Malawi.</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="#"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <h3 class="fw-bold text-primary mb-4">CHIPUNGA<span class="text-secondary">FARMS</span>LTD</h3>
+                    <p>Chipunga Farms are located in Nkhata Bay, in the cool highlands of Viphya Plateau in Northern Malawi. Nestled near the natural woodlands of Kaningina Forest, the farm benefits from rich soils, steady rainfall, high altitude and temperatures ideal for producing quality coffee and macadamia.</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>PO Box 345, Mzuzu, Malawi</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+265 990 956 011</p>
-                    <p><i class="fa fa-envelope me-3"></i>chipungafarmsltd@gmail.com</p>
+                    <p>PO Box 345, Mzuzu, Malawi</p>
+                    <p>+265 991 239 684 / +265 883 182 877</p>
+                    <p>chipungafarmsltd@gmail.com</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
@@ -988,8 +446,9 @@
                     <a class="btn btn-link" href="product.html">Our Products</a>
                     <a class="btn btn-link" href="Out_Growers_Scheme.html">Outgrowers Scheme</a>
                     <a class="btn btn-link" href="gallery.html">Gallery</a>
-                    <a class="btn btn-link" href="blog.html">Blog</a>
-                    <a class="btn btn-link" href="policies.html">Policies & Resources</a>
+                    <a class="btn btn-link" href="investors.html">Investor Relations</a>
+                    <a class="btn btn-link" href="careers.html">Careers</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
@@ -1005,10 +464,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Chipunga Farms Limited</a>, All Right Reserved.
+                        &copy; Chipunga Farms Limited, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        Designed By <a href="#">Himawari Holdings</a>
+                        Designed By Himawari Holdings
                     </div>
                 </div>
             </div>
